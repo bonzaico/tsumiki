@@ -1,0 +1,6 @@
+build/*
+built-tests/*
+tmp/*
+node_modules/*
+*.log
+.vscode
