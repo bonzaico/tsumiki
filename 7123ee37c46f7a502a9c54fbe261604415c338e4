@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ecf639ca_d9419666",
+        "filename": "packages/components/.eslintrc",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2019-07-03T08:54:09Z",
+      "side": 1,
+      "message": "why do we need node?",
+      "range": {
+        "startLine": 4,
+        "startChar": 7,
+        "endLine": 4,
+        "endChar": 35
+      },
+      "revId": "7123ee37c46f7a502a9c54fbe261604415c338e4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f2d318f_c8e3ab0d",
+        "filename": "packages/components/package.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2019-07-03T08:54:09Z",
+      "side": 1,
+      "message": "Probably bonzai-react-components?",
+      "range": {
+        "startLine": 2,
+        "startChar": 11,
+        "endLine": 2,
+        "endChar": 28
+      },
+      "revId": "7123ee37c46f7a502a9c54fbe261604415c338e4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3306ded7_5c18c004",
+        "filename": "packages/components/package.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2019-07-03T08:54:09Z",
+      "side": 1,
+      "message": "Add peerDependency or react and probably react-dom",
+      "revId": "7123ee37c46f7a502a9c54fbe261604415c338e4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db5ad15e_5f9f379d",
+        "filename": "packages/components/src/BZButton/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2019-07-03T08:54:09Z",
+      "side": 1,
+      "message": "Just Button",
+      "range": {
+        "startLine": 4,
+        "startChar": 13,
+        "endLine": 4,
+        "endChar": 21
+      },
+      "revId": "7123ee37c46f7a502a9c54fbe261604415c338e4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
