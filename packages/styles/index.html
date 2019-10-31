@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
     <link href="dist/output.css" rel="stylesheet">
 </head>
-<body>
+<body class="theme--light">
     <div style="position: fixed; right: 20px; top: 20px;">
         <button id="btn" type="button" onclick="myFunction();">Light Theme</button>
     </div>
@@ -16,7 +16,7 @@
         <br/><br/><br/>
         <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
         <br/><br/><br/>
-        
+
     </div>
 
 
@@ -27,6 +27,12 @@
             x.innerHTML = "Dark Theme";
         } else {
             x.innerHTML = "Light Theme";
+        }
+
+        var el = document.querySelector('body');
+
+        el.onclick = function() {
+          el.classList.toggle('theme--dark');
         }
     }
     </script>

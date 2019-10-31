@@ -1,4 +1,5 @@
 @import '../colors';
-.myname{
-    background: $grey10;
-}
+
+$carbon--theme--dark: (
+  interactive-01: $grey10
+);
