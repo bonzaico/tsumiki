@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bonzai Style components</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div style="position: fixed; right: 20px; top: 20px;">
+        <button id="btn" type="button" onclick="myFunction();">Light Theme</button>
+    </div>
+    <div>
+        <h3>This is Bonzai Style Component</h3>
+        <button type="button" onclick="alert('Hello world!')">Sample Button</button>
+        <br/><br/><br/>
+        <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+        <br/><br/><br/>
+        
+    </div>
+
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("btn");
+        if (x.innerHTML === "Light Theme") {
+            x.innerHTML = "Dark Theme";
+        } else {
+            x.innerHTML = "Light Theme";
+        }
+    }
+    </script>
+</body>
+</html>
