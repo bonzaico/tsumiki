@@ -1,0 +1,6 @@
+{
+    "extends": [
+        "eslint-config-bonzai",
+        "eslint-config-bonzai/node"
+    ]
+}
