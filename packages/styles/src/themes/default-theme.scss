@@ -1,0 +1,8 @@
+$carbon--theme: (
+  interactive-01:
+    if(
+      global-variable-exists('interactive-01'),
+      $interactive-01,
+      map-get($carbon--theme--light, 'interactive-01')
+    )
+) !default;
