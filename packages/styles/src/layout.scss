@@ -1,0 +1,463 @@
+@import "~bootstrap/dist/css/bootstrap-grid";
+@import './var';
+
+.#{$custom-property-prefix}--container {
+    @extend .container;
+}
+
+.#{$custom-property-prefix}--container-fluid {
+    @extend .container-fluid;
+}
+
+.#{$custom-property-prefix}--row {
+    @extend .row;
+}
+
+.#{$custom-property-prefix}--col {
+    @extend .col;
+}
+
+.#{$custom-property-prefix}--col-1 {
+    @extend .col-1;
+}
+
+.#{$custom-property-prefix}--col-2 {
+    @extend .col-2;
+}
+
+.#{$custom-property-prefix}--col-3 {
+    @extend .col-3;
+}
+
+.#{$custom-property-prefix}--col-4 {
+    @extend .col-4;
+}
+
+.#{$custom-property-prefix}--col-5 {
+    @extend .col-5;
+}
+
+.#{$custom-property-prefix}--col-6 {
+    @extend .col-6;
+}
+
+.#{$custom-property-prefix}--col-7 {
+    @extend .col-7;
+}
+
+.#{$custom-property-prefix}--col-8 {
+    @extend .col-8;
+}
+
+.#{$custom-property-prefix}--col-9 {
+    @extend .col-9;
+}
+
+.#{$custom-property-prefix}--col-10 {
+    @extend .col-10;
+}
+
+.#{$custom-property-prefix}--col-11 {
+    @extend .col-11;
+}
+
+.#{$custom-property-prefix}--col-12 {
+    @extend .col-12;
+}
+
+.#{$custom-property-prefix}--col-auto {
+    @extend .col-auto;
+}
+
+.#{$custom-property-prefix}--col-sm-1 {
+    @extend .col-sm-1;
+}
+
+.#{$custom-property-prefix}--col-sm-2 {
+    @extend .col-sm-2;
+}
+
+.#{$custom-property-prefix}--col-sm-3 {
+    @extend .col-sm-3;
+}
+
+.#{$custom-property-prefix}--col-sm-4 {
+    @extend .col-sm-4;
+}
+
+.#{$custom-property-prefix}--col-sm-5 {
+    @extend .col-sm-5;
+}
+
+.#{$custom-property-prefix}--col-sm-6 {
+    @extend .col-sm-6;
+}
+
+.#{$custom-property-prefix}--col-sm-7 {
+    @extend .col-sm-7;
+}
+
+.#{$custom-property-prefix}--col-sm-8 {
+    @extend .col-sm-8;
+}
+
+.#{$custom-property-prefix}--col-sm-9 {
+    @extend .col-sm-9;
+}
+
+.#{$custom-property-prefix}--col-sm-10 {
+    @extend .col-sm-10;
+}
+
+.#{$custom-property-prefix}--col-sm-11 {
+    @extend .col-sm-11;
+}
+
+.#{$custom-property-prefix}--col-sm-12 {
+    @extend .col-sm-12;
+}
+
+.#{$custom-property-prefix}--col-sm {
+    @extend .col-sm;
+}
+
+
+.#{$custom-property-prefix}--col-md-1 {
+    @extend .col-md-1;
+}
+
+.#{$custom-property-prefix}--col-md-2 {
+    @extend .col-md-2;
+}
+
+.#{$custom-property-prefix}--col-md-3 {
+    @extend .col-md-3;
+}
+
+.#{$custom-property-prefix}--col-md-4 {
+    @extend .col-md-4;
+}
+
+.#{$custom-property-prefix}--col-md-5 {
+    @extend .col-md-5;
+}
+
+.#{$custom-property-prefix}--col-md-6 {
+    @extend .col-md-6;
+}
+
+.#{$custom-property-prefix}--col-md-7 {
+    @extend .col-md-7;
+}
+
+.#{$custom-property-prefix}--col-md-8 {
+    @extend .col-md-8;
+}
+
+.#{$custom-property-prefix}--col-md-9 {
+    @extend .col-md-9;
+}
+
+.#{$custom-property-prefix}--col-md-10 {
+    @extend .col-md-10;
+}
+
+.#{$custom-property-prefix}--col-md-11 {
+    @extend .col-md-11;
+}
+
+.#{$custom-property-prefix}--col-md-12 {
+    @extend .col-md-12;
+}
+
+.#{$custom-property-prefix}--col-md {
+    @extend .col-md;
+}
+
+
+.#{$custom-property-prefix}--col-lg-1 {
+    @extend .col-lg-1;
+}
+
+.#{$custom-property-prefix}--col-lg-2 {
+    @extend .col-lg-2;
+}
+
+.#{$custom-property-prefix}--col-lg-3 {
+    @extend .col-lg-3;
+}
+
+.#{$custom-property-prefix}--col-lg-4 {
+    @extend .col-lg-4;
+}
+
+.#{$custom-property-prefix}--col-lg-5 {
+    @extend .col-lg-5;
+}
+
+.#{$custom-property-prefix}--col-lg-6 {
+    @extend .col-lg-6;
+}
+
+.#{$custom-property-prefix}--col-lg-7 {
+    @extend .col-lg-7;
+}
+
+.#{$custom-property-prefix}--col-lg-8 {
+    @extend .col-lg-8;
+}
+
+.#{$custom-property-prefix}--col-lg-9 {
+    @extend .col-lg-9;
+}
+
+.#{$custom-property-prefix}--col-lg-10 {
+    @extend .col-lg-10;
+}
+
+.#{$custom-property-prefix}--col-lg-11 {
+    @extend .col-lg-11;
+}
+
+.#{$custom-property-prefix}--col-lg-12 {
+    @extend .col-lg-12;
+}
+
+.#{$custom-property-prefix}--col-lg {
+    @extend .col-lg;
+}
+
+
+.#{$custom-property-prefix}--col-xl-1 {
+    @extend .col-xl-1;
+}
+
+.#{$custom-property-prefix}--col-xl-2 {
+    @extend .col-xl-2;
+}
+
+.#{$custom-property-prefix}--col-xl-3 {
+    @extend .col-xl-3;
+}
+
+.#{$custom-property-prefix}--col-xl-4 {
+    @extend .col-xl-4;
+}
+
+.#{$custom-property-prefix}--col-xl-5 {
+    @extend .col-xl-5;
+}
+
+.#{$custom-property-prefix}--col-xl-6 {
+    @extend .col-xl-6;
+}
+
+.#{$custom-property-prefix}--col-xl-7 {
+    @extend .col-xl-7;
+}
+
+.#{$custom-property-prefix}--col-xl-8 {
+    @extend .col-xl-8;
+}
+
+.#{$custom-property-prefix}--col-xl-9 {
+    @extend .col-xl-9;
+}
+
+.#{$custom-property-prefix}--col-xl-10 {
+    @extend .col-xl-10;
+}
+
+.#{$custom-property-prefix}--col-xl-11 {
+    @extend .col-xl-11;
+}
+
+.#{$custom-property-prefix}--col-xl-12 {
+    @extend .col-xl-12;
+}
+
+.#{$custom-property-prefix}--col-xl {
+    @extend .col-xl;
+}
+
+.#{$custom-property-prefix}--flex-row {
+    @extend .flex-row;
+}
+
+.#{$custom-property-prefix}--flex-column {
+    @extend .flex-column;
+}
+
+.#{$custom-property-prefix}--flex-column-reverse {
+    @extend .flex-column-reverse;
+}
+
+.#{$custom-property-prefix}--flex-row-reverse {
+    @extend .flex-row-reverse;
+}
+
+.#{$custom-property-prefix}--flex-wrap {
+    @extend .flex-wrap;
+}
+
+.#{$custom-property-prefix}--flex-nowrap {
+    @extend .flex-nowrap;
+}
+
+.#{$custom-property-prefix}--flex-wrap-reverse {
+    @extend .flex-wrap-reverse;
+}
+
+.#{$custom-property-prefix}--flex-fill {
+    @extend .flex-fill;
+}
+
+.#{$custom-property-prefix}--justify-content-start {
+    @extend .justify-content-start;
+}
+
+.#{$custom-property-prefix}--justify-content-end {
+    @extend .justify-content-end;
+}
+
+.#{$custom-property-prefix}--justify-content-center {
+    @extend .justify-content-center;
+}
+
+.#{$custom-property-prefix}--justify-content-between {
+    @extend .justify-content-between;
+}
+
+.#{$custom-property-prefix}--justify-content-around {
+    @extend .justify-content-around;
+}
+
+.#{$custom-property-prefix}--align-items-start {
+    @extend .align-items-start;
+}
+
+.#{$custom-property-prefix}--align-items-end {
+    @extend .align-items-end;
+}
+
+.#{$custom-property-prefix}--align-items-center {
+    @extend .align-items-center;
+}
+
+.#{$custom-property-prefix}--align-items-baseline {
+    @extend .align-items-baseline;
+}
+
+.#{$custom-property-prefix}--align-items-stretch {
+    @extend .align-items-stretch;
+}
+
+.#{$custom-property-prefix}--no-gutters {
+    @extend .no-gutters;
+}
+
+
+.#{$custom-property-prefix}--order-0 {
+    @extend .order-0;
+}
+
+.#{$custom-property-prefix}--order-1 {
+    @extend .order-1;
+}
+
+.#{$custom-property-prefix}--order-2 {
+    @extend .order-2;
+}
+
+.#{$custom-property-prefix}--order-3 {
+    @extend .order-3;
+}
+
+.#{$custom-property-prefix}--order-4 {
+    @extend .order-4;
+}
+
+.#{$custom-property-prefix}--order-5 {
+    @extend .order-5;
+}
+
+.#{$custom-property-prefix}--order-6 {
+    @extend .order-6;
+}
+
+.#{$custom-property-prefix}--order-7 {
+    @extend .order-7;
+}
+
+.#{$custom-property-prefix}--order-8 {
+    @extend .order-8;
+}
+
+.#{$custom-property-prefix}--order-9 {
+    @extend .order-9;
+}
+
+.#{$custom-property-prefix}--order-10 {
+    @extend .order-10;
+}
+
+.#{$custom-property-prefix}--order-11 {
+    @extend .order-11;
+}
+
+.#{$custom-property-prefix}--order-12 {
+    @extend .order-12;
+}
+
+.#{$custom-property-prefix}--order-first {
+    @extend .order-first;
+}
+
+.#{$custom-property-prefix}--order-last {
+    @extend .order-last;
+}
+
+
+.#{$custom-property-prefix}--offset-1 {
+    @extend .offset-1;
+}
+
+.#{$custom-property-prefix}--offset-2 {
+    @extend .offset-2;
+}
+
+.#{$custom-property-prefix}--offset-3 {
+    @extend .offset-3;
+}
+
+.#{$custom-property-prefix}--offset-4 {
+    @extend .offset-4;
+}
+
+.#{$custom-property-prefix}--offset-5 {
+    @extend .offset-5;
+}
+
+.#{$custom-property-prefix}--offset-6 {
+    @extend .offset-6;
+}
+
+.#{$custom-property-prefix}--offset-7 {
+    @extend .offset-7;
+}
+
+.#{$custom-property-prefix}--offset-8 {
+    @extend .offset-8;
+}
+
+.#{$custom-property-prefix}--offset-9 {
+    @extend .offset-9;
+}
+
+.#{$custom-property-prefix}--offset-10 {
+    @extend .offset-10;
+}
+
+.#{$custom-property-prefix}--offset-11 {
+    @extend .offset-11;
+}
