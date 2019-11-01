@@ -10,15 +10,16 @@
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "autoprefixer": "^9.7.0",
+    "autoprefixer": "9.7.0",
     "documentation": "8.1.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "4.11.0",
     "rollup": "1.1.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "stylelint": "^11.1.1",
+    "rollup-plugin-postcss": "2.0.3",
+    "stylelint": "11.1.1",
     "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "8.0.1",
+    "react-bootstrap": "1.0.0-beta.14"
   }
 }

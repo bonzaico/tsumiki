@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
     <link href="dist/output.css" rel="stylesheet">
 </head>
-<body class="theme--light">
-    <div style="position: fixed; right: 20px; top: 20px;">
-        <button id="btn" type="button" onclick="myFunction();">Light Theme</button>
-    </div>
-    <div>
-        <h3>This is Bonzai Style Component</h3>
-        <button type="button" onclick="alert('Hello world!')">Sample Button</button>
-        <br/><br/><br/>
-        <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
-        <br/><br/><br/>
+<body class="demo-page theme--light">
+    <div class="bz-container-fluid">
+        <div class="bz--container">
+            <div style="position: fixed; right: 20px; top: 20px;">
+                <button id="btn" type="button" onclick="myFunction();">Light Theme</button>
+            </div>
+            <div>
+                <h3>This is Bonzai Style Component</h3>
+                <button type="button" onclick="alert('Hello world!')">Sample Button</button>
+                <br/><br/><br/>
+                <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+                <br/><br/><br/>
 
+            </div>
+            <h3>Basic Grid Structure</h3>
+            <p>Resize the browser window to see the effect.</p>
+            <div class="bz--row">
+                <div class="bz--col-xs-9 bz--col-md-7">.bz--col-xs-9 .bz--col-md-7</div>
+                <div class="bz--col-xs-3 bz--col-md-5">.bz--col-xs-3 .bz--col-md-5</div>
+            </div>
+            <div class="bz--row">
+                <div class="bz--col-xs-6 bz--col-md-10">.bz--col-xs-6 .bz--col-md-10</div>
+                <div class="bz--col-xs-6 bz--col-md-2">.bz--col-xs-6 .bz--col-md-2</div>
+            </div>
+        </div>
     </div>
 
 

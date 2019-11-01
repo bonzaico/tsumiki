@@ -1,4 +1,4 @@
-$custom-property-prefix: 'bz' !default;
+@import './var';
 
 @mixin custom-property($name, $value, $prefix: $custom-property-prefix) {
     @if type-of($value) == map {
@@ -26,21 +26,341 @@ $custom-property-prefix: 'bz' !default;
   $emit-custom-properties: true,
   $emit-difference: true
 ) {
+  $ui-background: map-get($theme, 'ui-background') !global;
   $interactive-01: map-get($theme, 'interactive-01') !global;
-
+  $interactive-02: map-get($theme, 'interactive-02') !global;
+  $interactive-03: map-get($theme, 'interactive-03') !global;
+  $interactive-04: map-get($theme, 'interactive-04') !global;
+  $text-01: map-get($theme, 'text-01') !global;
+  $text-02: map-get($theme, 'text-02') !global;
+  $text-03: map-get($theme, 'text-03') !global;
+  $text-04: map-get($theme, 'text-04') !global;
+  $text-05: map-get($theme, 'text-05') !global;
+  $overlay-01: map-get($theme, 'overlay-01') !global;
+  $danger: map-get($theme, 'danger') !global;
+  $focus: map-get($theme, 'focus') !global;
+  $hover-primary: map-get($theme, 'hover-primary') !global;
+  $active-primary: map-get($theme, 'active-primary') !global;
+  $hover-primary-text: map-get($theme, 'hover-primary-text') !global;
+  $hover-secondary: map-get($theme, 'hover-secondary') !global;
+  $active-secondary: map-get($theme, 'active-secondary') !global;
+  $disabled-01: map-get($theme, 'disabled-01') !global;
+  $brand-01: map-get($theme, 'brand-01') !global;
+  $brand-02: map-get($theme, 'brand-02') !global;
+//----------------------------------------------------------------------------
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $ui-background: var(
+            --#{$custom-property-prefix}-ui-background,
+            map-get($theme, 'ui-background')
+        ) !global;
+    }
     @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
         $interactive-01: var(
             --#{$custom-property-prefix}-interactive-01,
             map-get($theme, 'interactive-01')
         ) !global;
     }
-
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $interactive-02: var(
+            --#{$custom-property-prefix}-interactive-02,
+            map-get($theme, 'interactive-02')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $interactive-03: var(
+            --#{$custom-property-prefix}-interactive-03,
+            map-get($theme, 'interactive-03')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $interactive-04: var(
+            --#{$custom-property-prefix}-interactive-04,
+            map-get($theme, 'interactive-04')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $text-01: var(
+            --#{$custom-property-prefix}-text-01,
+            map-get($theme, 'text-01')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $text-02: var(
+            --#{$custom-property-prefix}-text-02,
+            map-get($theme, 'text-02')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $text-03: var(
+            --#{$custom-property-prefix}-text-03,
+            map-get($theme, 'text-03')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $text-04: var(
+            --#{$custom-property-prefix}-text-04,
+            map-get($theme, 'text-04')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $text-05: var(
+            --#{$custom-property-prefix}-text-05,
+            map-get($theme, 'text-05')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $overlay-01: var(
+            --#{$custom-property-prefix}-overlay-01,
+            map-get($theme, 'overlay-01')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $danger: var(
+            --#{$custom-property-prefix}-danger,
+            map-get($theme, 'danger')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $focus: var(
+            --#{$custom-property-prefix}-focus,
+            map-get($theme, 'focus')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $hover-primary: var(
+            --#{$custom-property-prefix}-hover-primary,
+            map-get($theme, 'hover-primary')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $active-primary: var(
+            --#{$custom-property-prefix}-active-primary,
+            map-get($theme, 'active-primary')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $hover-primary-text: var(
+            --#{$custom-property-prefix}-hover-primary-text,
+            map-get($theme, 'hover-primary-text')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $hover-secondary: var(
+            --#{$custom-property-prefix}-hover-secondary,
+            map-get($theme, 'hover-secondary')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $active-secondary: var(
+            --#{$custom-property-prefix}-active-secondary,
+            map-get($theme, 'active-secondary')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $disabled-01: var(
+            --#{$custom-property-prefix}-disabled-01,
+            map-get($theme, 'disabled-01')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $brand-01: var(
+            --#{$custom-property-prefix}-brand-01,
+            map-get($theme, 'brand-01')
+        ) !global;
+    }
+    @if global-variable-exists('feature-flags') and map-get($feature-flags, 'enable-css-custom-properties') {
+        $brand-02: var(
+            --#{$custom-property-prefix}-brand-02,
+            map-get($theme, 'brand-02')
+        ) !global;
+    }
+//----------------------------------------------------------------------------
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'ui-background', $emit-difference)
+        {
+            @include custom-property(
+                'ui-background',
+                map-get($theme, 'ui-background')
+            );
+        }
+    }
     @if $emit-custom-properties == true {
         @if should-emit($theme, $carbon--theme, 'interactive-01', $emit-difference)
         {
             @include custom-property(
                 'interactive-01',
                 map-get($theme, 'interactive-01')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'interactive-02', $emit-difference)
+        {
+            @include custom-property(
+                'interactive-02',
+                map-get($theme, 'interactive-02')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'interactive-03', $emit-difference)
+        {
+            @include custom-property(
+                'interactive-03',
+                map-get($theme, 'interactive-03')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'interactive-04', $emit-difference)
+        {
+            @include custom-property(
+                'interactive-04',
+                map-get($theme, 'interactive-04')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'text-01', $emit-difference)
+        {
+            @include custom-property(
+                'text-01',
+                map-get($theme, 'text-01')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'text-02', $emit-difference)
+        {
+            @include custom-property(
+                'text-02',
+                map-get($theme, 'text-02')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'text-03', $emit-difference)
+        {
+            @include custom-property(
+                'text-03',
+                map-get($theme, 'text-03')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'text-04', $emit-difference)
+        {
+            @include custom-property(
+                'text-04',
+                map-get($theme, 'text-04')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'text-05', $emit-difference)
+        {
+            @include custom-property(
+                'text-05',
+                map-get($theme, 'text-05')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'overlay-01', $emit-difference)
+        {
+            @include custom-property(
+                'overlay-01',
+                map-get($theme, 'overlay-01')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'danger', $emit-difference)
+        {
+            @include custom-property(
+                'danger',
+                map-get($theme, 'danger')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'focus', $emit-difference)
+        {
+            @include custom-property(
+                'focus',
+                map-get($theme, 'focus')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'hover-primary', $emit-difference)
+        {
+            @include custom-property(
+                'hover-primary',
+                map-get($theme, 'hover-primary')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'active-primary', $emit-difference)
+        {
+            @include custom-property(
+                'active-primary',
+                map-get($theme, 'active-primary')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'hover-primary-text', $emit-difference)
+        {
+            @include custom-property(
+                'hover-primary-text',
+                map-get($theme, 'hover-primary-text')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'hover-secondary', $emit-difference)
+        {
+            @include custom-property(
+                'hover-secondary',
+                map-get($theme, 'hover-secondary')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'active-secondary', $emit-difference)
+        {
+            @include custom-property(
+                'active-secondary',
+                map-get($theme, 'active-secondary')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'disabled-01', $emit-difference)
+        {
+            @include custom-property(
+                'disabled-01',
+                map-get($theme, 'disabled-01')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'brand-01', $emit-difference)
+        {
+            @include custom-property(
+                'brand-01',
+                map-get($theme, 'brand-01')
+            );
+        }
+    }
+    @if $emit-custom-properties == true {
+        @if should-emit($theme, $carbon--theme, 'brand-02', $emit-difference)
+        {
+            @include custom-property(
+                'brand-02',
+                map-get($theme, 'brand-02')
             );
         }
     }

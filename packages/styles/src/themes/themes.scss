@@ -19,9 +19,3 @@ $feature-flags: (
 .theme--dark {
     @include carbon--theme($carbon--theme--dark, true);
 }
-
-//@include carbon--theme($carbon--theme--light, true);
-
-div {
-    background: $interactive-01;
-}
