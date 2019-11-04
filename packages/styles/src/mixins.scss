@@ -28,7 +28,6 @@
 ) {
   $ui-background: map-get($theme, 'ui-background') !global;
   $interactive-01: map-get($theme, 'interactive-01') !global;
-  @debug $interactive-01;
   $interactive-02: map-get($theme, 'interactive-02') !global;
   $interactive-03: map-get($theme, 'interactive-03') !global;
   $interactive-04: map-get($theme, 'interactive-04') !global;
@@ -558,5 +557,5 @@
 
 @mixin font-size($size) {
   font-size: $size;
-  font-size: calculateRem($size);
+  font-size: calculaterem($size);
 }
