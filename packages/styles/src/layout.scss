@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap-grid";
+@import '~bootstrap/dist/css/bootstrap-grid';
 @import './var';
 
 .#{$custom-property-prefix}--container {
@@ -121,7 +121,6 @@
     @extend .col-sm;
 }
 
-
 .#{$custom-property-prefix}--col-md-1 {
     @extend .col-md-1;
 }
@@ -174,7 +173,6 @@
     @extend .col-md;
 }
 
-
 .#{$custom-property-prefix}--col-lg-1 {
     @extend .col-lg-1;
 }
@@ -226,7 +224,6 @@
 .#{$custom-property-prefix}--col-lg {
     @extend .col-lg;
 }
-
 
 .#{$custom-property-prefix}--col-xl-1 {
     @extend .col-xl-1;
@@ -356,7 +353,6 @@
     @extend .no-gutters;
 }
 
-
 .#{$custom-property-prefix}--order-0 {
     @extend .order-0;
 }
@@ -416,7 +412,6 @@
 .#{$custom-property-prefix}--order-last {
     @extend .order-last;
 }
-
 
 .#{$custom-property-prefix}--offset-1 {
     @extend .offset-1;

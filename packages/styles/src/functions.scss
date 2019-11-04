@@ -16,12 +16,12 @@
 ///   @if feature-flag-enabled('components-x') { ... }
 /// @group feature-flags
 @function feature-flag-enabled($feature) {
-  @if variable-exists(feature-flags) ==
-    true and
-    map-get($feature-flags, $feature) ==
-    true
-  {
-    @return true;
-  }
-  @return false;
+    @if variable-exists(feature-flags) ==
+        true and
+        map-get($feature-flags, $feature) ==
+        true
+    {
+        @return true;
+    }
+    @return false;
 }

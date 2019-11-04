@@ -1,6 +1,6 @@
 $interactive-01: if(
-  global-variable-exists('carbon--theme') and
-    map-has-key($carbon--theme, 'interactive-01'),
-  map-get($carbon--theme, 'interactive-01'),
-  #0f62fe
+    global-variable-exists('carbon--theme') and
+        map-has-key($carbon--theme, 'interactive-01'),
+    map-get($carbon--theme, 'interactive-01'),
+    #0f62fe
 ) !default;

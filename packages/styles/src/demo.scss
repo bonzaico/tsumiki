@@ -2,12 +2,14 @@
     background: $ui-background;
     color: $text-01;
 
-    .bz--col-xs-9.bz--col-md-7, .bz--col-xs-6.bz--col-md-2 {
+    .bz--col-xs-9.bz--col-md-7,
+    .bz--col-xs-6.bz--col-md-2 {
         background: $interactive-01;
         border: 1px solid;
     }
 
-    .bz--col-xs-3.bz--col-md-5, .bz--col-xs-6.bz--col-md-10 {
+    .bz--col-xs-3.bz--col-md-5,
+    .bz--col-xs-6.bz--col-md-10 {
         background: $danger;
         border: 1px solid;
     }
