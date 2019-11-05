@@ -11,4 +11,13 @@
         background: $danger;
         border: 1px solid;
     }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    .code {
+        color: $red10;
+        @include font-size(12px);
+    }
 }
