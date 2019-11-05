@@ -1,8 +1,102 @@
-$carbon--theme: (
-  interactive-01:
-    if(
-      global-variable-exists('interactive-01'),
-      $interactive-01,
-      map-get($carbon--theme--light, 'interactive-01')
-    )
+$bonzai--theme: (
 ) !default;
+
+$ui-background: $baseWhite;
+$interactive-01: $baseLeafGreen;
+$interactive-02: $grey10;
+$interactive-03: $grey20;
+$interactive-04: $green10;
+$interactive-05: $baseWhite;
+$text-01: $baseMidnightBlue;
+$text-02: $baseLeafGreen;
+$text-03: $grey10;
+$text-04: $grey20;
+$text-05: $baseWhite;
+$overlay-01: rgba($baseBlack, 0.5);
+$danger: $red10;
+$focus: $green10;
+$hover-primary: rgba($baseLeafGreen, 0.9);
+$active-primary: $green10;
+$hover-primary-text: $baseWhite;
+$hover-secondary: $grey10;
+$active-secondary: $grey10;
+$disabled-01: $grey20;
+$brand-01: $baseMidnightBlue;
+$brand-02: $baseLeafGreen;
+$ui-1: $green10;
+$ui-2: $green20;
+$ui-3: $grey10;
+$ui-4: $grey20;
+$ui-5: $blue10;
+$ui-6: $blue20;
+$ui-7: $yellow10;
+$ui-8: $yellow20;
+
+$document-base-font-size: 16px !default;
+
+//-----------------------Font Family Base-----------------------//
+
+$font-family-sans-serif:
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for macOS (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+//table default values
+//table tag
+$table-cell-padding: 5px;
+$table-border-width: 1px;
+$table-spacer: 0px;
+$table-accent-bg: $grey20;
+$table-hover-color: $green10;
+$table-hover-bg: $ui-background;
+$table-striped-order: even;
+
+//list-defaults
+$list-bullet-url: "http://massets.bonzai.ad/internalAssets/2019/11/05/tick.png.png";
+$list-bullet-char: "✓";
+$list-bullet-color: $green10;
+
+//btn-defaults
+$btn-hover-transition-time: 0.1s;
+
+$btn-padding--primary: 7px 12px;
+$btn-bg-color--primary: $interactive-01;
+$btn-text-color--primary: $text-05;
+$btn-border-radius--primary: 2px;
+$btn-border-size--primary: 0;
+$btn-border-color--primary: $interactive-01;
+$btn-hover-bg-color--primary: $hover-primary;
+$btn-hover-text-color--primary: $hover-primary-text;
+$btn-text-transform--primary: uppercase;
+$btn-font-size--primary: 12px;
+
+$btn-padding--secondary: 7px 12px;
+$btn-bg-color--secondary: $interactive-03;
+$btn-text-color--secondary: $text-01;
+$btn-border-radius--secondary: 5px;
+$btn-border-size--secondary: 1px;
+$btn-border-color--secondary: $ui-3;
+$btn-hover-bg-color--secondary: $hover-secondary;
+$btn-hover-text-color--secondary: $brand-01;
+$btn-text-transform--secondary: initial;
+$btn-font-size--secondary: 12px;
+
+$btn-padding--tertiary: 7px 12px;
+$btn-bg-color--tertiary: transparent;
+$btn-text-color--tertiary: $text-01;
+$btn-border-radius--tertiary: 0;
+$btn-border-size--tertiary: 0;
+$btn-border-color--tertiary: $ui-3;
+$btn-hover-bg-color--tertiary: transparent;
+$btn-hover-text-color--tertiary: $text-02;
+$btn-text-transform--tertiary: initial;
+$btn-font-size--tertiary: 12px;

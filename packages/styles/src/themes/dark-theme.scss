@@ -1,11 +1,12 @@
 @import '../colors';
 
-$carbon--theme--dark: (
+$bonzai--theme--dark: (
     ui-background: $grey10,
     interactive-01: $grey20,
     interactive-02: $grey10,
     interactive-03: $green10,
     interactive-04: $green20,
+    interactive-05: $baseWhite,
     text-01: $baseWhite,
     text-02: $grey10,
     text-03: $grey20,
@@ -21,5 +22,13 @@ $carbon--theme--dark: (
     active-secondary: $grey10,
     disabled-01: $grey20,
     brand-01: $baseMidnightBlue,
-    brand-02: $baseLeafGreen
+    brand-02: $baseLeafGreen,
+    ui-1: $green10,
+    ui-2: $green20,
+    ui-3: $grey10,
+    ui-4: $grey20,
+    ui-5: $blue10,
+    ui-6: $blue20,
+    ui-7: $yellow10,
+    ui-8: $yellow20
 );
