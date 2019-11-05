@@ -1,8 +1,34 @@
-$carbon--theme: (
-  interactive-01:
-    if(
-      global-variable-exists('interactive-01'),
-      $interactive-01,
-      map-get($carbon--theme--light, 'interactive-01')
-    )
+$bonzai--theme: (
 ) !default;
+
+$ui-background: $baseWhite;
+$document-base-font-size: 16px !default;
+
+//-----------------------Font Family Base-----------------------//
+
+$font-family-sans-serif:
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for macOS (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+//table default values
+//table tag
+$table-cell-padding: 5px;
+$table-border-width: 1px;
+$table-spacer: 0px;
+$table-accent-bg: $grey20;
+$table-hover-color: $green10;
+$table-hover-bg: $ui-background;
+$table-striped-order: even;
+$list-bullet-url: "http://massets.bonzai.ad/internalAssets/2019/11/05/tick.png.png";
+$list-bullet-char: "✓";
+$list-bullet-color: $green10;

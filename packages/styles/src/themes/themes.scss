@@ -5,17 +5,17 @@
 @import '../feature-flags';
 @import '../mixins';
 
-//@include carbon--theme($carbon--theme--dark);
+//@include bonzai--theme($bonzai--theme--dark);
 
-$carbon--theme: $carbon--theme--light !default;
+$bonzai--theme: $bonzai--theme--light !default;
 
 $feature-flags: (
     enable-css-custom-properties: true
 );
 
-.theme--light {
-    @include carbon--theme($carbon--theme--light, true);
-}
 .theme--dark {
-    @include carbon--theme($carbon--theme--dark, true);
+    @include bonzai--theme($bonzai--theme--dark, true);
+}
+.theme--light {
+    @include bonzai--theme($bonzai--theme--light, true);
 }

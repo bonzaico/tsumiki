@@ -21,8 +21,8 @@
     @return map-get($theme-a, $token) != map-get($theme-b, $token);
 }
 
-@mixin carbon--theme(
-  $theme: $carbon--theme,
+@mixin bonzai--theme(
+  $theme: $bonzai--theme,
   $emit-custom-properties: true,
   $emit-difference: true
 ) {
@@ -176,7 +176,7 @@
     }
 //----------------------------------------------------------------------------
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'ui-background', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'ui-background', $emit-difference)
         {
             @include custom-property(
                 'ui-background',
@@ -185,7 +185,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'interactive-01', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'interactive-01', $emit-difference)
         {
             @include custom-property(
                 'interactive-01',
@@ -194,7 +194,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'interactive-02', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'interactive-02', $emit-difference)
         {
             @include custom-property(
                 'interactive-02',
@@ -203,7 +203,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'interactive-03', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'interactive-03', $emit-difference)
         {
             @include custom-property(
                 'interactive-03',
@@ -212,7 +212,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'interactive-04', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'interactive-04', $emit-difference)
         {
             @include custom-property(
                 'interactive-04',
@@ -221,7 +221,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'text-01', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'text-01', $emit-difference)
         {
             @include custom-property(
                 'text-01',
@@ -230,7 +230,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'text-02', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'text-02', $emit-difference)
         {
             @include custom-property(
                 'text-02',
@@ -239,7 +239,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'text-03', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'text-03', $emit-difference)
         {
             @include custom-property(
                 'text-03',
@@ -248,7 +248,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'text-04', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'text-04', $emit-difference)
         {
             @include custom-property(
                 'text-04',
@@ -257,7 +257,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'text-05', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'text-05', $emit-difference)
         {
             @include custom-property(
                 'text-05',
@@ -266,7 +266,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'overlay-01', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'overlay-01', $emit-difference)
         {
             @include custom-property(
                 'overlay-01',
@@ -275,7 +275,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'danger', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'danger', $emit-difference)
         {
             @include custom-property(
                 'danger',
@@ -284,7 +284,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'focus', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'focus', $emit-difference)
         {
             @include custom-property(
                 'focus',
@@ -293,7 +293,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'hover-primary', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'hover-primary', $emit-difference)
         {
             @include custom-property(
                 'hover-primary',
@@ -302,7 +302,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'active-primary', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'active-primary', $emit-difference)
         {
             @include custom-property(
                 'active-primary',
@@ -311,7 +311,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'hover-primary-text', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'hover-primary-text', $emit-difference)
         {
             @include custom-property(
                 'hover-primary-text',
@@ -320,7 +320,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'hover-secondary', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'hover-secondary', $emit-difference)
         {
             @include custom-property(
                 'hover-secondary',
@@ -329,7 +329,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'active-secondary', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'active-secondary', $emit-difference)
         {
             @include custom-property(
                 'active-secondary',
@@ -338,7 +338,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'disabled-01', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'disabled-01', $emit-difference)
         {
             @include custom-property(
                 'disabled-01',
@@ -347,7 +347,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'brand-01', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'brand-01', $emit-difference)
         {
             @include custom-property(
                 'brand-01',
@@ -356,7 +356,7 @@
         }
     }
     @if $emit-custom-properties == true {
-        @if should-emit($theme, $carbon--theme, 'brand-02', $emit-difference)
+        @if should-emit($theme, $bonzai--theme, 'brand-02', $emit-difference)
         {
             @include custom-property(
                 'brand-02',
@@ -364,4 +364,16 @@
             );
         }
     }
+}
+
+//-------OTHER MIXINS----------
+
+@function calculateRem($size) {
+  $remSize: $size / $document-base-font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
 }
