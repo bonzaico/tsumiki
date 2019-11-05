@@ -1,0 +1,50 @@
+.#{$custom-property-prefix}--custom-list-img {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin: 0;
+        padding: 0 0 0 25px;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-image: url(#{$list-bullet-url});
+            background-repeat: no-repeat;
+            height: 1em;
+            width: 1em;
+            display: block;
+            position: absolute;
+            background-position: center;
+            background-size: contain;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.#{$custom-property-prefix}--custom-list-char {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin: 0;
+        padding: 0 0 0 25px;
+        position: relative;
+
+        &:before {
+            content: '#{$list-bullet-char}';
+            display: block;
+            position: absolute;
+            background-position: center;
+            background-size: contain;
+            left: 0;
+            top: 0;
+            color: $list-bullet-color;
+            font-size: 1em;
+            font-weight: 600;
+        }
+    }
+}

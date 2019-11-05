@@ -1,0 +1,51 @@
+.#{$custom-property-prefix}--btn {
+    cursor: pointer;
+    transition: all $btn-hover-transition-time ease;
+    outline: none;
+    box-sizing: border-box;
+
+    &--primary {
+        padding: $btn-padding--primary;
+        background-color: $btn-bg-color--primary;
+        color: $btn-text-color--primary;
+        border-radius: $btn-border-radius--primary;
+        border: $btn-border-size--primary solid $btn-border-color--primary;
+        text-transform: $btn-text-transform--primary;
+        font-size: $btn-font-size--primary;
+
+        &:hover, &:focus {
+            background-color: $btn-hover-bg-color--primary;
+            color: $btn-hover-text-color--primary;
+        }
+    }
+
+    &--secondary {
+        padding: $btn-padding--secondary;
+        background-color: $btn-bg-color--secondary;
+        color: $btn-text-color--secondary;
+        border-radius: $btn-border-radius--secondary;
+        border: $btn-border-size--secondary solid $btn-border-color--secondary;
+        text-transform: $btn-text-transform--secondary;
+        font-size: $btn-font-size--secondary;
+
+        &:hover, &:focus {
+            background-color: $btn-hover-bg-color--secondary;
+            color: $btn-hover-text-color--secondary;
+        }
+    }
+
+    &--tertiary {
+        padding: $btn-padding--tertiary;
+        background-color: $btn-bg-color--tertiary;
+        color: $btn-text-color--tertiary;
+        border-radius: $btn-border-radius--tertiary;
+        border: $btn-border-size--tertiary solid $btn-border-color--tertiary;
+        text-transform: $btn-text-transform--tertiary;
+        font-size: $btn-font-size--tertiary;
+
+        &:hover, &:focus {
+            background-color: $btn-hover-bg-color--tertiary;
+            color: $btn-hover-text-color--tertiary;
+        }
+    }
+}
