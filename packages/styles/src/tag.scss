@@ -1,0 +1,36 @@
+.#{$custom-property-prefix}--tag {
+    @include font-size($tag-font-size);
+
+    padding: 5px 10px;
+    color: $tag-text-color;
+    background-color: $tag-bg-color;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 2px;
+
+    &--green {
+        background-color: $ui-2;
+        color: $ui-1;
+    }
+
+    &--grey {
+        background-color: $ui-4;
+        color: $ui-3;
+    }
+
+    &--blue {
+        background-color: $ui-6;
+        color: $ui-5;
+    }
+
+    &--yellow {
+        background-color: $ui-8;
+        color: $ui-7;
+    }
+
+    &--red {
+        background-color: $ui-10;
+        color: $ui-9;
+    }
+
+}

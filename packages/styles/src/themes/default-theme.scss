@@ -1,8 +1,100 @@
-$carbon--theme: (
-  interactive-01:
-    if(
-      global-variable-exists('interactive-01'),
-      $interactive-01,
-      map-get($carbon--theme--light, 'interactive-01')
-    )
-) !default;
+$ui-background: $baseWhite !default;
+//$interactive-01: $baseLeafGreen !default;
+$interactive-02: $grey10 !default;
+$interactive-03: $grey20 !default;
+$interactive-04: $green10 !default;
+$interactive-05: $baseWhite !default;
+$text-01: $baseMidnightBlue !default;
+$text-02: $baseLeafGreen !default;
+$text-03: $grey10 !default;
+$text-04: $grey20 !default;
+$text-05: $baseWhite !default;
+$overlay-01: rgba($baseBlack, 0.5) !default;
+$danger: $red10 !default;
+$focus: $green10 !default;
+$hover-primary: rgba($baseLeafGreen, 0.9) !default;
+$active-primary: $green10 !default;
+$hover-primary-text: $baseWhite !default;
+$hover-secondary: $grey10 !default;
+$active-secondary: $grey10 !default;
+$disabled-01: $grey20 !default;
+$brand-01: $baseMidnightBlue !default;
+$brand-02: $baseLeafGreen !default;
+$ui-1: $green10 !default;
+$ui-2: $green20 !default;
+$ui-3: $grey10 !default;
+$ui-4: $grey20 !default;
+$ui-5: $blue10 !default;
+$ui-6: $blue20 !default;
+$ui-7: $yellow10 !default;
+$ui-8: $yellow20 !default;
+$ui-9: $red10 !default;
+$ui-10: $red20 !default;
+
+$document-base-font-size: 16px !default;
+
+//-----------------------Font Family Base-----------------------//
+
+$font-family-sans-serif:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+//table default values
+//table tag
+$table-cell-padding: 5px;
+$table-border-width: 1px;
+$table-spacer: 0px;
+$table-accent-bg: $grey20;
+$table-hover-color: $green10;
+$table-hover-bg: $ui-background;
+$table-striped-order: even;
+
+//list-defaults
+$list-bullet-url: "http://massets.bonzai.ad/internalAssets/2019/11/05/tick.png.png";
+$list-bullet-char: "✓";
+$list-bullet-color: $green10;
+
+//btn-defaults
+$btn-hover-transition-time: 0.1s;
+
+$btn-padding--primary: 7px 12px;
+$btn-bg-color--primary: $interactive-01;
+$btn-text-color--primary: $text-05;
+$btn-border-radius--primary: 2px;
+$btn-border-size--primary: 0;
+$btn-border-color--primary: $interactive-01;
+$btn-hover-bg-color--primary: $hover-primary;
+$btn-hover-text-color--primary: $hover-primary-text;
+$btn-text-transform--primary: uppercase;
+$btn-font-size--primary: 12px;
+
+$btn-padding--secondary: 7px 12px;
+$btn-bg-color--secondary: $interactive-03;
+$btn-text-color--secondary: $text-01;
+$btn-border-radius--secondary: 5px;
+$btn-border-size--secondary: 1px;
+$btn-border-color--secondary: $ui-3;
+$btn-hover-bg-color--secondary: $hover-secondary;
+$btn-hover-text-color--secondary: $brand-01;
+$btn-text-transform--secondary: initial;
+$btn-font-size--secondary: 12px;
+
+$btn-padding--tertiary: 7px 12px;
+$btn-bg-color--tertiary: transparent;
+$btn-text-color--tertiary: $text-01;
+$btn-border-radius--tertiary: 0;
+$btn-border-size--tertiary: 0;
+$btn-border-color--tertiary: $ui-3;
+$btn-hover-bg-color--tertiary: transparent;
+$btn-hover-text-color--tertiary: $text-02;
+$btn-text-transform--tertiary: initial;
+$btn-font-size--tertiary: 12px;
+
+//tag defaults
+$tag-font-size: 10px;
+$tag-text-color: $ui-4;
+$tag-bg-color: $ui-3;
