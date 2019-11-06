@@ -11,9 +11,29 @@ storiesOf("Buttons", module)
             disabled: false,
             // size: "medium"
         };
+        const propsSecondary = {
+            className: "custom-class",
+            kind: "secondary" as const,
+            disabled: false,
+            // size: "medium"
+        };
+        const propsTertiary = {
+            className: "custom-class",
+            kind: "tertiary" as const,
+            disabled: false,
+            // size: "medium"
+        };
         return (
             <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
-                <Button {...props}>Button</Button>
+                <div className="bz--col-2">
+                    <Button {...props}>Button Primary</Button>
+                </div>
+                <div className="bz--col-2">
+                    <Button {...propsSecondary}>Button Secondary</Button>
+                </div>
+                <div className="bz--col-2">
+                    <Button {...propsTertiary}>Button Tertiary</Button>
+                </div>
             </div>
         );
     })

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { settings } from "../settings";
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
-    kind?: "primary" | "secondary",
+    kind?: "primary" | "secondary" | "tertiary",
     children?: React.ReactNode,
     as?: "button" | "a" | "input",
     disabled?: boolean,
@@ -32,6 +32,7 @@ export const Button: React.FunctionComponent<Props> = ({
         [`${namespace}--btn`]: true,
         [`${namespace}--btn--primary`]: kind === "primary",
         [`${namespace}--btn--secondary`]: kind === "secondary",
+        [`${namespace}--btn--tertiary`]: kind === "tertiary",
         [`${namespace}--btn--disabled`]: disabled,
         [`${namespace}--btn--large`]: size === "large",
         [`${namespace}--btn--medium`]: size === "medium",
