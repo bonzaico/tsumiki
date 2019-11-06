@@ -63,6 +63,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "bonzai-styles": "file:../styles",
     "classnames": "^2.2.6"
   },
   "peerDependencies": {
