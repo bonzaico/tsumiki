@@ -1,4 +1,5 @@
 import { configure } from "@storybook/react";
+import "bonzai-styles/dist/output.css";
 
 const req = require.context("../src", true, /stories\.(ts|tsx)$/);
 
