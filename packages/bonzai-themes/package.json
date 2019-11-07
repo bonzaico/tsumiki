@@ -1,0 +1,28 @@
+{
+  "name": "bonzai-themes",
+  "version": "1.0.0",
+  "description": "Themes for Bonzai style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/rollup ./src/index.js --file ./src/bundle.js --format cjs && ./node_modules/.bin/rollup index.js --file bundle.js --format cjs && node bundle.js && rollup -c --environment BUILD:production",
+    "start": "rollup -c --environment BUILD:development"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/node": "^12.12.0",
+    "autoprefixer": "9.7.0",
+    "documentation": "8.1.2",
+    "node-sass": "4.11.0",
+    "rollup": "1.1.0",
+    "rollup-plugin-postcss": "2.0.3",
+    "stylelint": "11.1.1",
+    "stylelint-config-standard": "^19.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.3.5",
+    "fs-extra": "^8.1.0",
+    "normalize.css": "8.0.1",
+    "prettier": "^1.18.2"
+  }
+}
