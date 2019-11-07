@@ -35,7 +35,8 @@ export const Button: React.FunctionComponent<Props> = ({
         [`${namespace}--btn--disabled`]: disabled,
         [`${namespace}--btn--large`]: size === "large",
         [`${namespace}--btn--medium`]: size === "medium",
-        [`${namespace}--btn--small`]: size === "small"
+        [`${namespace}--btn--small`]: size === "small",
+        [`${className}`]: className
     });
     const buttonProps = {
         ...other,
