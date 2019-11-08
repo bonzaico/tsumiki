@@ -6,49 +6,170 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
     <link href="dist/output.css" rel="stylesheet">
 </head>
-<body class="demo-page theme--light">
+<body class="demo-page">
     <div class="bz-container-fluid">
         <div class="bz--container">
             <div style="position: fixed; right: 20px; top: 20px;">
-                <button id="btn" type="button" onclick="myFunction();">Light Theme</button>
+                <button id="btn" class="bz--btn bz--btn--primary" type="button" onclick="myFunction();">Light Theme</button>
             </div>
-            <div>
-                <h3>This is Bonzai Style Component</h3>
-                <button type="button" onclick="alert('Hello world!')">Sample Button</button>
-                <br/><br/><br/>
-                <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
-                <br/><br/><br/>
-
-            </div>
-            <h3>Basic Grid Structure</h3>
-            <p>Resize the browser window to see the effect.</p>
-            <div class="bz--row">
-                <div class="bz--col-xs-9 bz--col-md-7">.bz--col-xs-9 .bz--col-md-7</div>
-                <div class="bz--col-xs-3 bz--col-md-5">.bz--col-xs-3 .bz--col-md-5</div>
-            </div>
-            <div class="bz--row">
-                <div class="bz--col-xs-6 bz--col-md-10">.bz--col-xs-6 .bz--col-md-10</div>
-                <div class="bz--col-xs-6 bz--col-md-2">.bz--col-xs-6 .bz--col-md-2</div>
+            <section>
+                <div class="bz--row">
+                    <div class="col-12">
+                        <h1>This is Bonzai Style Component</h1>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="bz--row">
+                    <div class="col-12">
+                        <button type="button" class="bz--btn bz--btn--primary" onclick="alert('Hello world!')">Button Primary</button>
+                    </div>
+                    <br/><br/>
+                    <div class="col-12">
+                        <button type="button" class="bz--btn bz--btn--secondary" onclick="alert('Hello world!')">Button Secondary</button>
+                    </div>
+                    <br/><br/>
+                    <div class="col-12">
+                        <button type="button" class="bz--btn bz--btn--tertiary" onclick="alert('Hello world!')">Button Tertiary</button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="bz--row">
+                    <div class="col-12">
+                        <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="bz--row">
+                    <div class="col-12">
+                        <h3>Basic Grid Structure</h3>
+                        <p>Resize the browser window to see the effect.</p>
+                    </div>
+                </div>
+                <div class="bz--row">
+                    <div class="bz--col-xs-9 bz--col-md-7">.bz--col-xs-9 .bz--col-md-7</div>
+                    <div class="bz--col-xs-3 bz--col-md-5">.bz--col-xs-3 .bz--col-md-5</div>
+                </div>
+                <div class="bz--row">
+                    <div class="bz--col-xs-6 bz--col-md-10">.bz--col-xs-6 .bz--col-md-10</div>
+                    <div class="bz--col-xs-6 bz--col-md-2">.bz--col-xs-6 .bz--col-md-2</div>
+                </div>
+            </section>
+            <section>
+                <div class="bz--row">
+                    <div class="col-12">
+                        <table class="bz--table bz--table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tags</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="code">
+                                    &lt;h1&gt;&lt;/h1&gt;
+                                </td>
+                                <td>
+                                    <h1>This is h1 heading!</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code">
+                                    &lt;h2&gt;&lt;/h2&gt;
+                                </td>
+                                <td>
+                                    <h2>This is h2 heading!</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code">
+                                    &lt;h3&gt;&lt;/h3&gt;
+                                </td>
+                                <td>
+                                    <h3>This is h3 heading!</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code">
+                                    &lt;h4&gt;&lt;/h4&gt;
+                                </td>
+                                <td>
+                                    <h4>This is h4 heading!</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code">
+                                    &lt;h5&gt;&lt;/h5&gt;
+                                </td>
+                                <td>
+                                    <h5>This is h5 heading!</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code">
+                                    &lt;h2&gt;&lt;/h2&gt;
+                                </td>
+                                <td>
+                                    <h6>This is h2 heading!</h6>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="bz--custom-list-img">
+                            <li>I am list item one</li>
+                            <li>I am list item two</li>
+                            <li>I am list item three</li>
+                            <li>I am list item four</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="bz--custom-list-char">
+                            <li>I am list item one</li>
+                            <li>I am list item two</li>
+                            <li>I am list item three</li>
+                            <li>I am list item four</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bz--tag bz--tag--green">Tag Green</div>
+                        <div class="bz--tag bz--tag--grey">Tag Grey</div>
+                        <div class="bz--tag bz--tag--blue">Tag Blue</div>
+                        <div class="bz--tag bz--tag--yellow">Tag Yellow</div>
+                        <div class="bz--tag bz--tag--red">Tag Red</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
     <script>
-    function myFunction() {
-        var x = document.getElementById("btn");
-        if (x.innerHTML === "Light Theme") {
-            x.innerHTML = "Dark Theme";
-        } else {
-            x.innerHTML = "Light Theme";
-        }
+        function myFunction() {
+            var x = document.getElementById("btn");
+            if (x.innerHTML === "Light Theme") {
+                x.innerHTML = "Dark Theme";
+            } else {
+                x.innerHTML = "Light Theme";
+            }
 
-        var el = document.querySelector('body');
-
-        el.onclick = function() {
-          el.classList.toggle('theme--dark');
+            var el = document.querySelector('body');
+            el.classList.toggle('theme--dark');
         }
-    }
     </script>
 </body>
 </html>

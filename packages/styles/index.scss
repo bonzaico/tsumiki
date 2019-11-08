@@ -1,3 +1,11 @@
+@import "src/scss/index";
+@import "src/mixins";
 @import "src/layout";
-@import "src/themes/themes";
+@import "src/typography";
+@import "src/tables";
+@import "src/button";
+@import "src/list";
+@import "src/tag";
+
+
 @import "src/demo";
