@@ -5,8 +5,9 @@
     color: $tag-text-color;
     background-color: $tag-bg-color;
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 10px;
     border-radius: 2px;
+    margin-bottom: 10px;
 
     &--green {
         background-color: $ui-2;
@@ -31,6 +32,10 @@
     &--red {
         background-color: $ui-10;
         color: $ui-9;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 
 }

@@ -1,8 +1,9 @@
 $table-background: $ui-background;
 $table-body-background: $ui-background;
-$table-header-background: $text-03;
+$table-header-background: $text-01;
 $table-color: $text-01;
-$table-border-color: $ui-3;
+$table-border-color: $ui-4;
+$table-outer-border-color: $ui-4;
 
 table {
     background-color: $table-background;
@@ -30,6 +31,7 @@ table {
   margin-bottom: $table-spacer;
   color: $table-color;
   background-color: $table-background; // Reset for nesting within parents with `background-color`.
+  border: 1px solid $table-outer-border-color;
 
   th,
   td {
@@ -40,7 +42,7 @@ table {
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-bottom: (1 * $table-border-width) solid $table-border-color;
   }
 
   tbody + tbody {

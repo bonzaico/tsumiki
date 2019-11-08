@@ -2,14 +2,26 @@
     background: $ui-background;
     color: $text-01;
 
-    .bz--col-xs-9.bz--col-md-7, .bz--col-xs-6.bz--col-md-2 {
-        background: $interactive-01;
-        border: 1px solid;
+    .bz--col-xs-9.bz--col-md-7 {
+        background: $ui-1;
+        border: 1px solid $ui-4;
+        border-bottom: none;
     }
 
-    .bz--col-xs-3.bz--col-md-5, .bz--col-xs-6.bz--col-md-10 {
-        background: $danger;
-        border: 1px solid;
+    .bz--col-xs-6.bz--col-md-2 {
+        background: $ui-3;
+        border: 1px solid $ui-4;
+    }
+
+    .bz--col-xs-3.bz--col-md-5 {
+        background: $ui-5;
+        border: 1px solid $ui-4;
+        border-bottom: none;
+    }
+
+    .bz--col-xs-6.bz--col-md-10 {
+        background: $ui-7;
+        border: 1px solid $ui-4;
     }
 
     section {
@@ -17,7 +29,8 @@
     }
 
     .code {
-        color: $danger;
+        color: $ui-10;
         @include font-size(12px);
+        font-weight: bold;
     }
 }
