@@ -1,1 +1,70 @@
 $custom-property-prefix: 'bz' !default;
+
+
+$document-base-font-size: 16px !default;
+
+//-----------------------Font Family Base-----------------------//
+
+$font-family-sans-serif:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+//table default values
+//table tag
+$table-cell-padding: 5px;
+$table-border-width: 1px;
+$table-spacer: 0px;
+$table-accent-bg: $ui-4;
+$table-hover-color: $interactive-01;
+$table-hover-bg: $ui-background;
+$table-striped-order: even;
+
+//list-defaults
+$list-bullet-url: "http://massets.bonzai.ad/internalAssets/2019/11/05/tick.png.png";
+$list-bullet-char: "✓";
+$list-bullet-color: $text-02;
+
+//btn-defaults
+$btn-hover-transition-time: 0.1s;
+
+$btn-padding--primary: 7px 12px;
+$btn-bg-color--primary: $interactive-01;
+$btn-text-color--primary: $text-05;
+$btn-border-radius--primary: 2px;
+$btn-border-size--primary: 0;
+$btn-border-color--primary: $interactive-01;
+$btn-hover-bg-color--primary: $hover-primary;
+$btn-hover-text-color--primary: $hover-primary-text;
+$btn-text-transform--primary: uppercase;
+$btn-font-size--primary: 12px;
+
+$btn-padding--secondary: 7px 12px;
+$btn-bg-color--secondary: $interactive-03;
+$btn-text-color--secondary: $text-01;
+$btn-border-radius--secondary: 5px;
+$btn-border-size--secondary: 1px;
+$btn-border-color--secondary: $ui-3;
+$btn-hover-bg-color--secondary: $hover-secondary;
+$btn-hover-text-color--secondary: $brand-01;
+$btn-text-transform--secondary: initial;
+$btn-font-size--secondary: 12px;
+
+$btn-padding--tertiary: 7px 12px;
+$btn-bg-color--tertiary: transparent;
+$btn-text-color--tertiary: $text-01;
+$btn-border-radius--tertiary: 0;
+$btn-border-size--tertiary: 0;
+$btn-border-color--tertiary: $ui-3;
+$btn-hover-bg-color--tertiary: transparent;
+$btn-hover-text-color--tertiary: $text-02;
+$btn-text-transform--tertiary: initial;
+$btn-font-size--tertiary: 12px;
+
+//tag defaults
+$tag-font-size: 10px;
+$tag-text-color: $ui-4;
+$tag-bg-color: $ui-3;

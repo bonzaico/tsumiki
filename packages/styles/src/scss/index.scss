@@ -1,0 +1,17 @@
+@import 'themes';
+
+//@include bonzai--theme($bonzai--theme--dark);
+$bonzai--theme: $bonzai--theme--light;
+@include bonzai--theme();
+$feature-flags: (
+    enable-css-custom-properties: true
+);
+
+.theme--dark {
+    @include bonzai--theme($bonzai--theme--dark, true);
+}
+.theme--light {
+    @include bonzai--theme($bonzai--theme--light, true);
+}
+
+//@include bonzai--theme($bonzai--theme--dark);

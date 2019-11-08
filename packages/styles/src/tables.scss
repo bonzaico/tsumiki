@@ -1,0 +1,82 @@
+$table-background: $ui-background;
+$table-body-background: $ui-background;
+$table-header-background: $text-03;
+$table-color: $text-01;
+$table-border-color: $ui-3;
+
+table {
+    background-color: $table-background;
+    width: 100%;
+    color: $table-color;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: $table-cell-padding;
+      vertical-align: top;
+      border-top: $table-border-width solid $table-border-color;
+    }
+}
+
+
+
+//-------OTHER
+//
+// Basic Bootstrap table
+//
+
+.#{$custom-property-prefix}--table {
+  width: 100%;
+  margin-bottom: $table-spacer;
+  color: $table-color;
+  background-color: $table-background; // Reset for nesting within parents with `background-color`.
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+}
+
+.#{$custom-property-prefix}--table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.#{$custom-property-prefix}--table-striped {
+  tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-accent-bg;
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.#{$custom-property-prefix}--table-hover {
+  tbody tr {
+    &hover {
+      color: $table-hover-color;
+      background-color: $table-hover-bg;
+    }
+  }
+}
