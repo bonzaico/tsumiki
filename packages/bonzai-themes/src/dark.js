@@ -35,19 +35,19 @@ const {
 
 module.exports.uiBackground = darkGrey10;
 module.exports.interactive01 = baseLeafGreen;
-module.exports.interactive02 = darkGrey10;
+module.exports.interactive02 = darkBlue10;
 module.exports.interactive03 = darkGrey20;
 module.exports.interactive04 = darkGreen10;
 module.exports.interactive05 = baseWhite;
-module.exports.text01 = baseMidnightBlue;
+module.exports.text01 = baseWhite;
 module.exports.text02 = baseLeafGreen;
-module.exports.text03 = darkGrey10;
-module.exports.text04 = darkGrey20;
+module.exports.text03 = darkBlue10;
+module.exports.text04 = darkYellow10;
 module.exports.text05 = baseWhite;
 module.exports.overlay01 = rgba(0,0,0, 0.5);
 module.exports.danger = darkRed10;
-module.exports.focus = darkGreen10;
-module.exports.hoverPrimary = rgba(0,0,0, 0.9);
+module.exports.focus = darkGreen20;
+module.exports.hoverPrimary = darkGreen20;
 module.exports.activePrimary = darkGreen10;
 module.exports.hoverPrimaryText = baseWhite;
 module.exports.hoverSecondary = darkGrey10;
