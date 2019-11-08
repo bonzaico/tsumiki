@@ -39,21 +39,21 @@ module.exports.baseBlack = rgb(0, 0, 0);
 //Secondary Color
 
 //Grey
-module.exports.darkGrey10 = "#353535";
+module.exports.darkGrey10 = "#191c20";
 module.exports.darkGrey20 = "#2d2d2d";
 
 //Green
-module.exports.darkGreen10 = rgb(37, 117, 120);
-module.exports.darkGreen20 = rgb(236, 244, 230);
+module.exports.darkGreen10 = "#47a447";
+module.exports.darkGreen20 = "rgb(37, 117, 120)";
 
 //Blue
-module.exports.darkBlue10 = rgb(107, 117, 170);
-module.exports.darkBlue20 = rgb(174, 197, 231);
+module.exports.darkBlue10 = "#0088cc";
+module.exports.darkBlue20 = "#5bc0de";
 
 //Yellow
-module.exports.darkYellow10 = rgb(242, 190, 55);
+module.exports.darkYellow10 = "#ed9c28";
 module.exports.darkYellow20 = rgb(245, 229, 140);
 
 //Red
-module.exports.darkRed10 = rgb(222, 99, 46);
+module.exports.darkRed10 = "#d53f3a";
 module.exports.darkRed20 = rgb(236, 166, 143);
