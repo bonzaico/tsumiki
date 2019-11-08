@@ -33,7 +33,7 @@ $btn-hover-transition-time: 0.1s;
 
 $btn-padding--primary: 7px 12px;
 $btn-bg-color--primary: $interactive-01;
-$btn-text-color--primary: $text-05;
+$btn-text-color--primary: $text-01;
 $btn-border-radius--primary: 2px;
 $btn-border-size--primary: 0;
 $btn-border-color--primary: $interactive-01;
@@ -63,6 +63,10 @@ $btn-hover-bg-color--tertiary: transparent;
 $btn-hover-text-color--tertiary: $text-02;
 $btn-text-transform--tertiary: initial;
 $btn-font-size--tertiary: 12px;
+
+$btn-text-color--anchor: $text-01;
+$btn-hover-text-color--anchor: $text-02;
+$btn-font-size--anchor: 12px;
 
 //tag defaults
 $tag-font-size: 10px;

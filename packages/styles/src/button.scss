@@ -48,4 +48,17 @@
             color: $btn-hover-text-color--tertiary;
         }
     }
+
+    &--anchor {
+        padding: 0;
+        background-color: transparent;
+        color: $btn-text-color--anchor;
+        border: none;
+        font-size: $btn-font-size--anchor;
+        text-decoration: none;
+
+        &:hover {
+            color: $btn-hover-text-color--anchor;
+        }
+    }
 }
