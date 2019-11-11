@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 import { settings } from "../settings";
 
-interface Props extends React.HTMLAttributes<HTMLButtonElement> {
+interface Props extends React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
     kind?: "primary" | "secondary" | "tertiary",
     children?: React.ReactNode,
     as?: "button" | "a" | "input",
