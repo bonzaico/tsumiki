@@ -11,5 +11,6 @@ export const debounce = (func: Function, wait: number, immediate?: boolean) => {
         window.clearTimeout(timeout);
         timeout = window.setTimeout(later, wait);
         if (callNow) func.apply(context, args);
+        return timeout;
     };
 }
