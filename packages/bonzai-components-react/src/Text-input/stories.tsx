@@ -12,7 +12,12 @@ storiesOf("Text input", module)
             placeHolder: "Tyrion Lannister"
         };
         return (
-            <TextInput {...props} />
+            <div>
+                <br/><br/>
+                <div className="col-3">
+                    <TextInput {...props} />
+                </div>
+            </div>
         );
     })
     .add("Input for entering name", () => {
@@ -23,7 +28,12 @@ storiesOf("Text input", module)
             validate: /[a-z]+\s[a-z]+/
         };
         return (
-            <TextInput {...props} />
+            <div>
+                <br/><br/>
+                <div className="col-3">
+                    <TextInput {...props} />
+                </div>
+            </div>
         );
     })
     .add("Alert on type end", () => {
@@ -34,7 +44,12 @@ storiesOf("Text input", module)
             onTypeEnd: () => alert("Enter your name!")
         };
         return (
-            <TextInput {...props} />
+            <div>
+                <br/><br/>
+                <div className="col-3">
+                    <TextInput {...props} />
+                </div>
+            </div>
         );
     })
     .add("With leading icon", () => {
@@ -44,6 +59,11 @@ storiesOf("Text input", module)
             leadingIcon: "icon-search"
         };
         return (
-            <TextInput {...props} />
+            <div>
+                <br/><br/>
+                <div className="col-3">
+                    <TextInput {...props} />
+                </div>
+            </div>
         );
     });
