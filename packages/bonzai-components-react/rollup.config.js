@@ -40,8 +40,13 @@ const BANNER = `/*!
 `;
 const BASEDIR = "src";
 
-const componentList = fs.readdirSync(BASEDIR);
+const getDirectories = source =>
+  fs.readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
+const componentList = getDirectories(BASEDIR);
 
+//console.log(componentList);
 const config = componentList.map(component => {
     const file = fs.readdirSync(`${BASEDIR}/${component}`).find(fn => fn === "index.tsx");
     if (!file) return {};

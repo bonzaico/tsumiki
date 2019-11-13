@@ -12,7 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     clearIcon?: string,
     onTypeEnd?: Function,
     clearSearchTooltip?: string,
-    onClear?: Function,    
+    onClear?: Function,
     disabled?: boolean
 };
 
@@ -85,17 +85,19 @@ export class SearchInput extends React.Component<Props, State> {
         const { value } = this.state;
         const inputClasses = classNames({
             [`${namespace}--input`]: true,
-            [`${this.props.className}`]: className
+            [`${this.props.className}`]: className,
+            [`${namespace}--input__leadingicon`]: leadingIcon,
+            [`${namespace}--input__trailingicon`]: trailingIcon,
         });
         const wrapperClasses = classNames({
-            [`${namespace}--input-wrapper`]: true,
+            [`${namespace}--input-wrapper ${namespace}--search-wrapper`]: true,
         });
         const leadingIconClasses = classNames({
-            [`${namespace}--input--leadingicon`]: true,
+            [`${namespace}--input-leadingicon`]: true,
             [`${leadingIcon}`]: leadingIcon,
         });
         const trailingIconClasses = classNames({
-            [`${namespace}--input--trailingicon`]: true,
+            [`${namespace}--input-trailingicon`]: true,
             [`${trailingIcon}`]: trailingIcon,
         });
 
