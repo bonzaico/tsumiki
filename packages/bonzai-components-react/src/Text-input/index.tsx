@@ -4,6 +4,7 @@ import { settings } from "../settings";
 import { debounce } from "../utils";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+    id: string,
     value: string,
     errorMsg: string,
     label?: string,
@@ -78,7 +79,7 @@ export class TextInput extends React.Component<Props, State> {
             });
             if (!isInvalid) this.props.onKeyDown(e);
         }
-    }    
+    }
 
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         this.execute(e, this.props.validate);
@@ -113,24 +114,26 @@ export class TextInput extends React.Component<Props, State> {
     }
 
     render() {
-        const { leadingIcon, trailingIcon, className, label, placeHolder, errorMsg, inline } = this.props;
+        const { id, leadingIcon, trailingIcon, className, label, placeHolder, errorMsg, inline } = this.props;
         const { isInvalid, value } = this.state;
         const inputClasses = classNames({
             [`${namespace}--input`]: true,
-            [`${namespace}--input--invalid`]: isInvalid,
-            [`${this.props.className}`]: className
+            [`${namespace}--input__invalid`]: isInvalid,
+            [`${this.props.className}`]: className,
+            [`${namespace}--input__leadingicon`]: leadingIcon,
+            [`${namespace}--input__trailingicon`]: trailingIcon,
         });
         const wrapperClasses = classNames({
             [`${namespace}--input-wrapper`]: true,
-            [`${namespace}--input-wrapper--inline`]: inline,
-            [`${namespace}--input-wrapper--invalid`]: isInvalid,
+            [`${namespace}--input-wrapper__inline`]: inline,
+            [`${namespace}--input-wrapper__invalid`]: isInvalid,
         });
         const leadingIconClasses = classNames({
-            [`${namespace}--input--leadingicon`]: true,
+            [`${namespace}--input-leadingicon`]: true,
             [`${leadingIcon}`]: leadingIcon,
         });
         const trailingIconClasses = classNames({
-            [`${namespace}--input--trailingicon`]: true,
+            [`${namespace}--input-trailingicon`]: true,
             [`${trailingIcon}`]: trailingIcon,
         });
 
@@ -140,6 +143,7 @@ export class TextInput extends React.Component<Props, State> {
             <div className={`${namespace}--input-container`}>
                 { leadingIcon ? <span className={leadingIconClasses}></span> : null }
                 <input
+                    id={id}
                     type="text"
                     className={inputClasses}
                     placeholder={placeHolder}
@@ -152,7 +156,7 @@ export class TextInput extends React.Component<Props, State> {
                 ></input>
                 { trailingIcon ? <span className={trailingIconClasses}></span> : null }
             </div>
-            {isInvalid ? <div>{errorMsg}</div> : null}
+            {isInvalid ? <div className="bz--input-error-msg">{errorMsg}</div> : null}
           </div>
         );
     }

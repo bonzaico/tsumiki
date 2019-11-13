@@ -4,6 +4,7 @@ import { settings } from "../settings";
 import { debounce } from "../utils";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+    id: string,
     defaultValue?: string,
     placeHolder?: string,
     className?: string,
@@ -12,8 +13,10 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     clearIcon?: string,
     onTypeEnd?: Function,
     clearSearchTooltip?: string,
-    onClear?: Function,    
-    disabled?: boolean
+    onClear?: Function,
+    disabled?: boolean,
+    autoSuggest?: boolean,
+    suggestions?: string[]
 };
 
 interface DefaultProps {
@@ -21,7 +24,8 @@ interface DefaultProps {
     placeHolder: string,
     clearSearchTooltip: string,
     disabled: boolean,
-    clearIcon: string
+    clearIcon: string,
+    autoSuggest: boolean
 }
 
 interface State {
@@ -36,10 +40,11 @@ export class SearchInput extends React.Component<Props, State> {
         placeHolder: "Enter search text",
         clearSearchTooltip: "Clear search",
         disabled: false,
-        clearIcon: "icon-clear"
+        clearIcon: "icon-clear",
+        autoSuggest: false
     };
     state: State = {
-        value: this.props.defaultValue || ""
+        value: this.props.defaultValue || SearchInput.defaultProps.defaultValue
     };
     typingTimer: number | undefined = undefined;
 
@@ -48,7 +53,8 @@ export class SearchInput extends React.Component<Props, State> {
         clearTimeout(this.typingTimer);
         this.typingTimer = (debounce(() => {
             if (typeof this.props.onTypeEnd === "function") {
-                this.props.onTypeEnd(e);
+                const target = e.target as HTMLInputElement;
+                this.props.onTypeEnd(target.value.trim());
             }
         }, 500))();
     }
@@ -81,21 +87,33 @@ export class SearchInput extends React.Component<Props, State> {
     }
 
     render() {
-        const { leadingIcon, trailingIcon, clearIcon, className, placeHolder, onClear } = this.props;
+        const {
+            id,
+            leadingIcon,
+            trailingIcon,
+            clearIcon,
+            className,
+            placeHolder,
+            onClear,
+            autoSuggest,
+            suggestions
+        } = this.props;
         const { value } = this.state;
         const inputClasses = classNames({
             [`${namespace}--input`]: true,
-            [`${this.props.className}`]: className
+            [`${this.props.className}`]: className,
+            [`${namespace}--input__leadingicon`]: leadingIcon,
+            [`${namespace}--input__trailingicon`]: trailingIcon,
         });
         const wrapperClasses = classNames({
-            [`${namespace}--input-wrapper`]: true,
+            [`${namespace}--input-wrapper ${namespace}--search-wrapper`]: true,
         });
         const leadingIconClasses = classNames({
-            [`${namespace}--input--leadingicon`]: true,
+            [`${namespace}--input-leadingicon`]: true,
             [`${leadingIcon}`]: leadingIcon,
         });
         const trailingIconClasses = classNames({
-            [`${namespace}--input--trailingicon`]: true,
+            [`${namespace}--input-trailingicon`]: true,
             [`${trailingIcon}`]: trailingIcon,
         });
 
@@ -104,6 +122,7 @@ export class SearchInput extends React.Component<Props, State> {
             <div className={`${namespace}--input-container`}>
                 { leadingIcon ? <span className={leadingIconClasses}></span> : null }
                 <input
+                    id={id}
                     type="text"
                     className={inputClasses}
                     placeholder={placeHolder}
@@ -127,6 +146,17 @@ export class SearchInput extends React.Component<Props, State> {
                         }}
                     ></span>
                 : null}
+            {
+                autoSuggest && suggestions && suggestions.length
+                    ? <ul className="dropdown">
+                        {
+                            suggestions.map(s =>
+                                <li className="dropdown--item" key={s}>{s}</li>
+                            )
+                        }
+                    </ul>
+                    : null
+            }
           </div>
         );
     }
