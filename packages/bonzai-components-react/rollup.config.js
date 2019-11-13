@@ -46,30 +46,36 @@ const BANNER = `/*!
 const BASEDIR = "src";
 
 const getDirectories = source =>
-  fs.readdirSync(source, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name);
+    fs
+        .readdirSync(source, { withFileTypes: true })
+        .filter(dirent => dirent.isDirectory())
+        .map(dirent => dirent.name);
 const componentList = getDirectories(BASEDIR);
 
 const config = componentList.map(component => {
-    const file = fs.readdirSync(`${BASEDIR}/${component}`).find(fn => fn === `${component}.tsx`);
+    const file = fs
+        .readdirSync(`${BASEDIR}/${component}`)
+        .find(fn => fn === `${component}.tsx`);
     if (!file) return {};
     return {
         external: ["react", "react-dom"],
         input: `${BASEDIR}/${component}/${component}.tsx`,
-        output: [{
-            file: `dist/${component}/index.js`,
-            format: "cjs",
-            exports: "named",
-            sourcemap: true,
-            banner: BANNER
-        }, {
-            file: `dist/${component}/index.es.js`,
-            format: "es",
-            exports: "named",
-            sourcemap: true,
-            banner: BANNER
-        }],
+        output: [
+            {
+                file: `dist/${component}/index.js`,
+                format: "cjs",
+                exports: "named",
+                sourcemap: true,
+                banner: BANNER
+            },
+            {
+                file: `dist/${component}/index.es.js`,
+                format: "es",
+                exports: "named",
+                sourcemap: true,
+                banner: BANNER
+            }
+        ],
         plugins: PLUGINS
     };
 });
