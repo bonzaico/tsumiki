@@ -6,6 +6,7 @@ import { TextInput } from ".";
 storiesOf("Text input", module)
     .add("Default", () => {
         const props = {
+            id: "name",
             value: "",
             errorMsg: "Wrong input",
             label: "Name",
@@ -22,6 +23,7 @@ storiesOf("Text input", module)
     })
     .add("Input for entering name", () => {
         const props = {
+            id: "name",
             value: "",
             errorMsg: "Wrong input",
             label: "Name",
@@ -38,6 +40,7 @@ storiesOf("Text input", module)
     })
     .add("Alert on type end", () => {
         const props = {
+            id: "name",
             value: "",
             errorMsg: "Wrong input",
             label: "Name",
@@ -54,6 +57,7 @@ storiesOf("Text input", module)
     })
     .add("With leading icon", () => {
         const props = {
+            id: "name",
             value: "",
             errorMsg: "Wrong input",
             leadingIcon: "icon-search"

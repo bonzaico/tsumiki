@@ -4,6 +4,7 @@ import { settings } from "../settings";
 import { debounce } from "../utils";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+    id: string,
     value: string,
     errorMsg: string,
     label?: string,
@@ -113,7 +114,7 @@ export class TextInput extends React.Component<Props, State> {
     }
 
     render() {
-        const { leadingIcon, trailingIcon, className, label, placeHolder, errorMsg, inline } = this.props;
+        const { id, leadingIcon, trailingIcon, className, label, placeHolder, errorMsg, inline } = this.props;
         const { isInvalid, value } = this.state;
         const inputClasses = classNames({
             [`${namespace}--input`]: true,
@@ -138,10 +139,11 @@ export class TextInput extends React.Component<Props, State> {
 
         return (
           <div className={wrapperClasses}>
-            <label className={`${namespace}--input-name`}>{label}</label>
+            <label htmlFor={id} className={`${namespace}--input-name`}>{label}</label>
             <div className={`${namespace}--input-container`}>
                 { leadingIcon ? <span className={leadingIconClasses}></span> : null }
                 <input
+                    id={id}
                     type="text"
                     className={inputClasses}
                     placeholder={placeHolder}
