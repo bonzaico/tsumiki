@@ -1,7 +1,7 @@
-.bz--input-wrapper {
+.#{$custom-property-prefix}--input-wrapper, .#{$custom-property-prefix}--search-wrapper {
     position: relative;
 
-    .input-name {
+    .#{$custom-property-prefix}--input-name {
         @include font-size($input-name-font-size);
 
         color: $input-name-color;
@@ -14,7 +14,11 @@
         white-space: nowrap;
     }
 
-    .bz--input {
+    .#{$custom-property-prefix}--input-container {
+        position: relative;
+    }
+
+    .#{$custom-property-prefix}--input {
         @include font-size($input-font-size);
 
         border: 1px solid $input-border-color;
@@ -43,27 +47,27 @@
             padding-right: 30px;
         }
     }
-    .bz--input-leadingicon {
+    .#{$custom-property-prefix}--input-leadingicon {
         position: absolute;
         left: 8px;
         top: 50%;
-        z-index: 1;
+        z-index: 11;
         transform: translateY(-50%);
 
         @include font-size($input-leadingicon-font-size);
     }
 
-    .bz--input-trailingicon {
+    .#{$custom-property-prefix}--input-trailingicon {
         position: absolute;
         right: 8px;
         top: 50%;
-        z-index: 1;
+        z-index: 11;
         transform: translateY(-50%);
 
         @include font-size($input-trailingicon-font-size);
     }
 
-    .input-error-msg {
+    .#{$custom-property-prefix}--input-error-msg {
         color: $input-error-color;
         white-space: nowrap;
         display: inline-block;
@@ -76,8 +80,8 @@
     }
 }
 
-.bz--input-wrapper__error {
-    .bz--input {
+.#{$custom-property-prefix}--input-wrapper__invalid {
+    .#{$custom-property-prefix}--input {
         border: 1px solid $input-border-color-error;
 
         &:hover {
@@ -86,11 +90,11 @@
     }
 }
 
-.bz--input-wrapper--inline {
+.#{$custom-property-prefix}--input-wrapper__inline {
     display: flex;
     align-items: center;
 
-    .input-name, .input-error-msg {
+    .#{$custom-property-prefix}--input-name, .#{$custom-property-prefix}--input-error-msg {
         position: initial;
         top: auto;
         left: auto;
@@ -98,11 +102,11 @@
         transform: none;
     }
 
-    .input-name {
+    .#{$custom-property-prefix}--input-name {
         margin-right: 10px;
     }
 
-    .bz--input-container {
+    .#{$custom-property-prefix}--input-container {
         margin-right: 10px;
     }
 }
