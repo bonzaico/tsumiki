@@ -1,4 +1,4 @@
-build/*
+dist/*
 built-tests/*
 tmp/*
 node_modules/*

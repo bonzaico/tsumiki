@@ -2,7 +2,6 @@
   "name": "bonzai-components-react",
   "version": "1.0.3",
   "description": "React components powering Bonzai applications",
-  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c --environment BUILD:production",
@@ -64,7 +63,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "bonzai-styles": "file:../styles",
+    "bonzai-styles": "1.0.3",
     "classnames": "^2.2.6"
   },
   "peerDependencies": {

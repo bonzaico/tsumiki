@@ -54,13 +54,13 @@ const config = componentList.map(component => {
         external: ["react", "react-dom"],
         input: `${BASEDIR}/${component}/index.tsx`,
         output: [{
-            file: `build/${component}/index.js`,
+            file: `dist/${component}/index.js`,
             format: "cjs",
             exports: "named",
             sourcemap: true,
             banner: BANNER
         }, {
-            file: `build/${component}/index.es.js`,
+            file: `dist/${component}/index.es.js`,
             format: "es",
             exports: "named",
             sourcemap: true,
