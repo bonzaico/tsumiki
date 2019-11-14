@@ -20,7 +20,7 @@
     "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {
-    "bonzai-themes": "file:../bonzai-themes",
+    "bonzai-themes": "1.0.2",
     "bootstrap": "4.3.1",
     "normalize.css": "8.0.1"
   }
