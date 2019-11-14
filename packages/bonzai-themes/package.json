@@ -1,6 +1,6 @@
 {
   "name": "bonzai-themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Themes for Bonzai style",
   "main": "index.js",
   "scripts": {
