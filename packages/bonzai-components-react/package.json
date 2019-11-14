@@ -2,6 +2,7 @@
   "name": "bonzai-components-react",
   "version": "1.0.0",
   "description": "React components powering Bonzai applications",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c --environment BUILD:production",
