@@ -110,3 +110,28 @@
         margin-right: 10px;
     }
 }
+
+.#{$custom-property-prefix}--search-wrapper {
+    .dropdown {
+        border: 1px solid $input-border-color;
+        padding: 0;
+        margin: 0;
+        border-top: none;
+        list-style: none;
+
+        &--item {
+            @include font-size($input-font-size);
+
+            color: $input-name-color;
+            background: $input-bg-color;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            transition: all 0.1s ease;
+
+            &:hover {
+                filter: invert(5%);
+                cursor: pointer;
+            }
+        }
+    }
+}
