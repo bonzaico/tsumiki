@@ -53,7 +53,7 @@ storiesOf("Search input", module)
         const suggestions = ["random", "text"];
         interface State {
             searchTerm: string
-        };        
+        };
         class AutoSuggest extends React.Component<{}, State> {
             state: State = {
                 searchTerm: ""
@@ -70,14 +70,17 @@ storiesOf("Search input", module)
                         })
                     },
                     autoSuggest: true,
-                    suggestions: []
+                    suggestions: [],
+                    onSearch: action("onSearch")
                 };
                 const propsWithSuggestions = {
                     ...props,
                     suggestions
                 };
                 return <div>
-                    <SearchInput {...(this.state.searchTerm ? propsWithSuggestions : props)} />
+                    <div className="bz--col-4">
+                        <SearchInput {...(this.state.searchTerm ? propsWithSuggestions : props)} />
+                    </div>
                 </div>
             }
         };
