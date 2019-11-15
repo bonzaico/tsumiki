@@ -11,7 +11,7 @@
     "lint-quiet": "eslint --quiet src"
   },
   "files": [
-    "build/*"
+    "dist/*"
   ],
   "author": "",
   "license": "BSD-3-Clause",
