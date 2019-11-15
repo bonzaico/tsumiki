@@ -16,7 +16,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     onClear?: Function,
     disabled?: boolean,
     autoSuggest?: boolean,
-    suggestions?: string[]
+    suggestions?: string[],
+    onSearch?: Function
 };
 
 interface DefaultProps {
@@ -63,6 +64,10 @@ export class SearchInput extends React.Component<Props, State> {
         window.clearTimeout(this.typingTimer);
         if (typeof this.props.onKeyDown === "function") {
             this.props.onKeyDown(e);
+        }
+        if (e.key === "Enter" && typeof this.props.onSearch === "function") {
+            let searchTerm = (e.target as HTMLInputElement).value;
+            this.props.onSearch(searchTerm);
         }
     };
 
