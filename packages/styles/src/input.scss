@@ -53,6 +53,7 @@
         top: 50%;
         z-index: 11;
         transform: translateY(-50%);
+        cursor: pointer;
 
         @include font-size($input-leadingicon-font-size);
     }
@@ -63,6 +64,7 @@
         top: 50%;
         z-index: 11;
         transform: translateY(-50%);
+        cursor: pointer;
 
         @include font-size($input-trailingicon-font-size);
     }
