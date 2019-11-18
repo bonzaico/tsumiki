@@ -145,7 +145,7 @@ export class TextInput extends React.Component<Props, State> {
           <div className={wrapperClasses}>
             <label htmlFor={id} className={`${namespace}--input-name`}>{label}</label>
             <div className={`${namespace}--input-container`}>
-                { leadingIcon ? <span className={leadingIconClasses}></span> : null }
+                { leadingIcon ? <label htmlFor={id} className={leadingIconClasses}></label> : null }
                 <input
                     id={id}
                     type="text"
@@ -158,7 +158,7 @@ export class TextInput extends React.Component<Props, State> {
                     onFocus={(e) => e.target.select()}
                     onKeyUp={(e) => e.preventDefault()}
                 ></input>
-                { trailingIcon ? <span className={trailingIconClasses}></span> : null }
+                { trailingIcon ? <label htmlFor={id} className={trailingIconClasses}></label> : null }
             </div>
             {showError ? <div className="bz--input-error-msg">{errorMsg}</div> : null}
           </div>
