@@ -125,7 +125,7 @@ export class SearchInput extends React.Component<Props, State> {
         return (
           <div className={wrapperClasses}>
             <div className={`${namespace}--input-container`}>
-                { leadingIcon ? <span className={leadingIconClasses}></span> : null }
+                { leadingIcon ? <label htmlFor={id} className={leadingIconClasses}></label> : null }
                 <input
                     id={id}
                     type="text"
@@ -137,7 +137,7 @@ export class SearchInput extends React.Component<Props, State> {
                     onBlur={this.onBlur}
                     onKeyUp={this.onKeyUp}
                 ></input>
-                { trailingIcon ? <span className={trailingIconClasses}></span> : null }
+                { trailingIcon ? <label htmlFor={id} className={trailingIconClasses}></label> : null }
             </div>
             {typeof onClear === "function"
                 && this.state.value != ""
