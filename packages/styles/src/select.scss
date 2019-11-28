@@ -1,0 +1,59 @@
+.#{$custom-property-prefix}--select {
+    position: relative;
+    border-radius: 4px;
+
+    & &__select {
+        border: 1px solid $select-border-color;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    & &__option {
+        font-size: 14px;
+        font-weight: 400;
+        color: $select-text-color;
+        padding: 5px 10px;
+        border-top: 1px solid $select-border-hover-color;
+
+        &:hover {
+            background: rgba($select-border-hover-color, 0.1);
+        }
+    }
+
+    & &__option--highlighted {
+        background: rgba($select-border-hover-color, 0.1);
+    }
+
+    & &__search {
+        font-size: 14px;
+        border: 1px solid $select-border-color;
+        border-radius: $select-border-radius;
+        background-clip: padding-box;
+        background: $select-bg-color;
+        color: $select-text-color;
+        -webkit-font-smoothing: antialiased;
+        outline: none;
+        padding: $select-padding;
+        letter-spacing: 0.6px;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+
+        &:hover {
+            border: 1px solid $select-border-hover-color;
+        }
+    }
+
+    &:before {
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-top: 1px solid $select-border-hover-color;
+        border-left: 1px solid $select-border-hover-color;
+        z-index: 111111;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-75%) rotate(-135deg);
+    }
+}
