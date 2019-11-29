@@ -1,33 +1,34 @@
-//import { rgb } from './rgb';
 const { rgb, rgba } = require('./rgb');
-//Primary Color
+const { hsl, hsla } = require('./hsl');
 
-module.exports.baseMidnightBlue = rgb(39, 55, 71);
-module.exports.baseLeafGreen = rgb(77, 123, 0);
-module.exports.baseWhite = rgb(255, 255, 255);
-module.exports.baseBlack = rgb(0, 0, 0);
+// Primary Color
 
-//Secondary Color
+module.exports.baseMidnightBlue = hsl(210, 29.1, 21.6);
+module.exports.baseLeafGreen = hsl(85, 100, 25.9);
+module.exports.baseWhite = hsl(0, 0, 100);
+module.exports.baseBlack = hsl(0, 0, 0);
 
-//Grey
-module.exports.grey10 = rgb(114, 125, 134);
-module.exports.grey20 = rgb(214, 217, 219);
+// Secondary Color
 
-//Green
-module.exports.green10 = rgb(37, 117, 120);
-module.exports.green20 = rgb(236, 244, 230);
+// Grey
+module.exports.grey10 = hsl(207, 8.1, 48.6);
+module.exports.grey20 = hsl(204, 6.5, 84.9);
 
-//Blue
-module.exports.blue10 = rgb(107, 117, 170);
-module.exports.blue20 = rgb(174, 197, 231);
+// Green
+module.exports.green10 = hsl(182.2, 52.9, 30.8);
+module.exports.green20 = hsl(94.3, 38.9, 92.9);
 
-//Yellow
-module.exports.yellow10 = rgb(242, 190, 55);
-module.exports.yellow20 = rgb(245, 229, 140);
+// Blue
+module.exports.blue10 = hsl(230.5, 27, 54.3);
+module.exports.blue20 = hsl(215.8, 54.3, 79.4);
 
-//Red
-module.exports.red10 = rgb(222, 99, 46);
-module.exports.red20 = rgb(236, 166, 143);
+// Yellow
+module.exports.yellow10 = hsl(43.3, 87.8, 58.2);
+module.exports.yellow20 = hsl(50.9, 84, 75.5);
+
+// Red
+module.exports.red10 = hsl(18.1, 72.7, 52.5);
+module.exports.red20 = hsl(14.8, 71, 74.3);
 
 //----------------------------------------------------------
 //dark theme dummy color codes

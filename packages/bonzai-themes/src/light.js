@@ -33,6 +33,8 @@ const {
     rgb
 }  = require('./colors/rgb');
 
+const { hsl } = require("./colors/hsl");
+
 module.exports.uiBackground = baseWhite;
 module.exports.interactive01 = baseLeafGreen;
 module.exports.interactive02 = grey10;
@@ -47,10 +49,10 @@ module.exports.text05 = baseWhite;
 module.exports.overlay01 = rgba(0,0,0, 0.5);
 module.exports.danger = red10;
 module.exports.focus = green10;
-module.exports.hoverPrimary = rgba(0,0,0, 0.9);
+module.exports.hoverPrimary = hsl(85, 100, 30);
 module.exports.activePrimary = green10;
 module.exports.hoverPrimaryText = baseWhite;
-module.exports.hoverSecondary = grey10;
+module.exports.hoverSecondary = hsl(204, 6.5, 80);
 module.exports.activeSecondary = grey10;
 module.exports.disabled01 = grey20;
 module.exports.brand01 = baseMidnightBlue;

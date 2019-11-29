@@ -30,7 +30,6 @@
 
         &:hover {
             background-color: $btn-hover-bg-color--secondary;
-            color: $btn-hover-text-color--secondary;
         }
     }
 
@@ -45,7 +44,7 @@
 
         &:hover {
             background-color: $btn-hover-bg-color--tertiary;
-            color: $btn-hover-text-color--tertiary;
+            border: $btn-border-size--tertiary solid $btn-hover-border-color--tertiary;
         }
     }
 
