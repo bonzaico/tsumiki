@@ -114,8 +114,12 @@ export class TextInput extends React.Component<Props, State> {
     }
 
     render() {
-        const { id, leadingIcon, trailingIcon, className, label, placeHolder, errorMsg, inline } = this.props;
+        const { id, leadingIcon, trailingIcon, className, label, placeHolder, errorMsg, inline, validate } = this.props;
         const { isInvalid, value } = this.state;
+        const showError =
+            validate
+                ? isInvalid && errorMsg
+                : errorMsg;
         const inputClasses = classNames({
             [`${namespace}--input`]: true,
             [`${namespace}--input__invalid`]: isInvalid,
@@ -156,7 +160,7 @@ export class TextInput extends React.Component<Props, State> {
                 ></input>
                 { trailingIcon ? <span className={trailingIconClasses}></span> : null }
             </div>
-            {isInvalid ? <div className="bz--input-error-msg">{errorMsg}</div> : null}
+            {showError ? <div className="bz--input-error-msg">{errorMsg}</div> : null}
           </div>
         );
     }
