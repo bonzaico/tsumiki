@@ -8,7 +8,8 @@
     "start": "rollup -c --environment BUILD:development",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint-quiet": "eslint --quiet src"
+    "lint-quiet": "eslint --quiet src",
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist/*"

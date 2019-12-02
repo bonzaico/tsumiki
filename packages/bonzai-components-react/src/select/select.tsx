@@ -40,10 +40,10 @@ const bemM = bem.e(`${namespace}--select`);
 
 export class Select extends React.Component<Props, State> {
     showSearch: boolean;
-    search: React.RefObject<HTMLInputElement>;
-    container: React.RefObject<HTMLDivElement>;
-    valueInput: React.RefObject<HTMLInputElement>;
-    select: React.RefObject<HTMLDivElement>;
+    search: HTMLInputElement | null;
+    container: HTMLDivElement | null;
+    valueInput: HTMLInputElement | null;
+    select: HTMLDivElement | null;
 
 
     static defaultProps: Props = {
@@ -73,10 +73,10 @@ export class Select extends React.Component<Props, State> {
             highlighted: null
         };
 
-        this.search = React.createRef();
-        this.container = React.createRef();
-        this.valueInput = React.createRef();
-        this.select = React.createRef();
+        this.search = null;
+        this.container = null;
+        this.valueInput = null;
+        this.select = null;
     }
 
     componentDidUpdate(prevProps: Props, prevState: State) {
@@ -166,7 +166,7 @@ export class Select extends React.Component<Props, State> {
         document.addEventListener('keyup', this.onKeyUp);
 
         if (this.state.filteredOptions.length > 0 && !this.props.multiple) {
-            const element = this.select.current;
+            const element = this.select;
 
             if (!element) return;
 
@@ -248,7 +248,7 @@ export class Select extends React.Component<Props, State> {
                     type="hidden"
                     autoComplete={this.props.autoComplete}
                     defaultValue={this.state.value}
-                    ref={this.valueInput}
+                    ref={element => { this.valueInput = element }}
                     name={this.props.name}
                 />
             );
@@ -268,7 +268,7 @@ export class Select extends React.Component<Props, State> {
                     style={style}
                     value={this.state.value}
                     readOnly
-                    ref={this.valueInput}
+                    ref={el => { this.valueInput = el; }}
                     name={this.props.name}
                 />
             );
@@ -280,7 +280,7 @@ export class Select extends React.Component<Props, State> {
             <input
                 name={name}
                 autoComplete={this.props.autoComplete}
-                ref={this.search}
+                ref={el => { this.search = el; }}
                 onFocus={this.onFocus}
                 onKeyPress={this.onKeyPress}
                 className={bemE("search")}
@@ -382,7 +382,7 @@ export class Select extends React.Component<Props, State> {
         });
 
         return (
-            <div ref={this.select} className={classes}>
+            <div ref={el => { this.select = el; }} className={classes}>
                 {optionList}
             </div>
         );
@@ -394,7 +394,7 @@ export class Select extends React.Component<Props, State> {
         });
 
         return (
-            <div className={classnames} ref={this.container}>
+            <div className={classnames} ref={el => { this.container = el; }}>
                 {this.renderValueInput()}
                 {this.showSearch
                     ? this.renderSearchField()

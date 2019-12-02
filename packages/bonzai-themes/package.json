@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/rollup ./src/index.js --file ./src/bundle.js --format cjs && ./node_modules/.bin/rollup index.js --file bundle.js --format cjs && node bundle.js && rollup -c --environment BUILD:production",
-    "start": "rollup -c --environment BUILD:development"
+    "start": "rollup -c --environment BUILD:development",
+    "prepublishOnly": "npm run build"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
