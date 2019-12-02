@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 import { settings } from "../settings";
-import * as Fuse from "fuse.js";
+import Fuse from "fuse.js";
 import { bem } from '../bem';
 import "./select.scss";
 
