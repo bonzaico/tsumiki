@@ -6,16 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c --environment BUILD:production",
-    "start": "rollup -c --environment BUILD:development"
+    "start": "rollup -c --environment BUILD:development",
+    "lint": "stylelint src/"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
     "autoprefixer": "9.7.0",
     "documentation": "8.1.2",
     "node-sass": "4.11.0",
+    "prettier": "^1.18.2",
     "rollup": "1.1.0",
     "rollup-plugin-postcss": "2.0.3",
-    "stylelint": "11.1.1",
+    "stylelint": "^11.1.1",
+    "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {

@@ -23,8 +23,8 @@
 
         border: 1px solid $input-border-color;
         border-radius: $input-border-radius;
-        background-clip: padding-box;
         background: $input-bg-color;
+        background-clip: padding-box;
         color: $input-text-color;
         -webkit-font-smoothing: antialiased;
         outline: none;

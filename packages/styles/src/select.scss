@@ -4,7 +4,7 @@
 
     & &__select {
         border: 1px solid $select-border-color;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     }
 
     & &__option {
@@ -27,8 +27,8 @@
         font-size: 14px;
         border: 1px solid $select-border-color;
         border-radius: $select-border-radius;
-        background-clip: padding-box;
         background: $select-bg-color;
+        background-clip: padding-box;
         color: $select-text-color;
         -webkit-font-smoothing: antialiased;
         outline: none;
@@ -43,7 +43,7 @@
         }
     }
 
-    &:before {
+    &::before {
         content: '';
         pointer-events: none;
         position: absolute;
