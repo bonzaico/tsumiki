@@ -2,7 +2,6 @@ import * as React from "react";
 import classNames from "classnames";
 import { settings } from "../settings";
 import * as Fuse from "fuse.js";
-import onClickOutside from "react-onclickoutside";
 import { bem } from '../bem';
 import "./select.scss";
 
