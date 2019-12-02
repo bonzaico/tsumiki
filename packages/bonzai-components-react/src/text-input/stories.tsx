@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { TextInput } from ".";
+import { TextInput } from "./text-input";
 
 storiesOf("Text input", module)
     .add("Default", () => {

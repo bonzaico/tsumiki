@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { SearchInput } from ".";
+import { SearchInput } from "./search-input";
 
 storiesOf("Search input", module)
     .add("Default", () => {
