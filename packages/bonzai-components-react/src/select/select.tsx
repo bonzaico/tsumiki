@@ -4,6 +4,7 @@ import { settings } from "../settings";
 import Fuse from "fuse.js";
 import { bem } from '../bem';
 import "./select.scss";
+import onClickOutside from 'react-onclickoutside';
 
 interface Option {
     label: string;
@@ -38,7 +39,7 @@ const namespace = settings.namespace;
 const bemE = bem.e(`${namespace}--select`);
 const bemM = bem.e(`${namespace}--select`);
 
-export class Select extends React.Component<Props, State> {
+class SelectComponent extends React.Component<Props, State> {
     showSearch: boolean;
     search: HTMLInputElement | null;
     container: HTMLDivElement | null;
@@ -84,6 +85,11 @@ export class Select extends React.Component<Props, State> {
             this.handleFocus();
         }
     }
+
+    // Required for onClickOutside
+    handleClickOutside = () => {
+        this.onBlur();
+    };
 
     onKeyDown = (e: KeyboardEvent) => {
         if (!this.state.focus) {
@@ -190,6 +196,10 @@ export class Select extends React.Component<Props, State> {
     };
 
     onBlur = () => {
+        if (this.showSearch && !this.props.multiple && this.search) {
+            this.search.blur();
+        }
+
         let search = '';
 
         if (this.state.value && this.showSearch && !this.props.multiple) {
@@ -404,3 +414,5 @@ export class Select extends React.Component<Props, State> {
         );
     }
 }
+
+export const Select = onClickOutside(SelectComponent);
