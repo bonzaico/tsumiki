@@ -1,6 +1,6 @@
 {
   "name": "bonzai-styles",
-  "version": "1.1.7",
+  "version": "1.1.10",
   "description": "Styles for Bonzai applications",
   "main": "index.js",
   "scripts": {
