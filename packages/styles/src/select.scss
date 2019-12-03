@@ -5,6 +5,7 @@
     & &__select {
         border: 1px solid $select-border-color;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        background-color: $select-bg-color;
     }
 
     & &__option {
@@ -15,12 +16,12 @@
         border-top: 1px solid $select-border-hover-color;
 
         &:hover {
-            background: rgba($select-border-hover-color, 0.1);
+            background: $select-border-hover-color;
         }
     }
 
     & &__option--highlighted {
-        background: rgba($select-border-hover-color, 0.1);
+        background: $select-border-hover-color;
     }
 
     & &__search {
