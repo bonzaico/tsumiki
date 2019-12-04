@@ -17,6 +17,18 @@
             background-color: $btn-hover-bg-color--primary;
             color: $btn-hover-text-color--primary;
         }
+
+        &.#{$custom-property-prefix}--btn--disabled {
+            background-color: $btn-bg-color--primary-disabled;
+            color: $btn-text-color--primary-disabled;
+            cursor: not-allowed;
+            filter: brightness(1.1);
+
+            &:hover {
+                background-color: $btn-bg-color--primary-disabled;
+                color: $btn-text-color--primary-disabled;
+            }
+        }
     }
 
     &--secondary {
@@ -30,6 +42,18 @@
 
         &:hover {
             background-color: $btn-hover-bg-color--secondary;
+        }
+
+        &.#{$custom-property-prefix}--btn--disabled {
+            background-color: $btn-bg-color--secondary-disabled;
+            color: $btn-text-color--secondary-disabled;
+            cursor: not-allowed;
+            filter: brightness(1.1);
+
+            &:hover {
+                background-color: $btn-bg-color--secondary-disabled;
+                color: $btn-text-color--secondary-disabled;
+            }
         }
     }
 
@@ -45,6 +69,18 @@
         &:hover {
             background-color: $btn-hover-bg-color--tertiary;
             border: $btn-border-size--tertiary solid $btn-hover-border-color--tertiary;
+        }
+
+        &.#{$custom-property-prefix}--btn--disabled {
+            background-color: $btn-bg-color--tertiary-disabled;
+            color: $btn-text-color--tertiary-disabled;
+            cursor: not-allowed;
+            filter: brightness(1.1);
+
+            &:hover {
+                background-color: $btn-bg-color--tertiary-disabled;
+                color: $btn-text-color--tertiary-disabled;
+            }
         }
     }
 
