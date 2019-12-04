@@ -37,4 +37,37 @@ storiesOf("Buttons", module)
             </div>
         );
     })
-    .add("with props", () => <Button onClick={action("onClick")}>Click Me</Button>);
+    .add("with props", () => <Button onClick={action("onClick")}>Click Me</Button>)
+    .add("Disabled", () => {
+        const propsDisabled = {
+            className: "custom-class",
+            // kind: "primary",
+            disabled: true,
+            // size: "medium"
+        };
+        const propsSecondaryDisabled = {
+            className: "custom-class",
+            kind: "secondary" as const,
+            disabled: true,
+            // size: "medium"
+        };
+        const propsTertiaryDisabled = {
+            className: "custom-class",
+            kind: "tertiary" as const,
+            disabled: true,
+            // size: "medium"
+        };
+        return (
+            <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
+                <div className="bz--col-2">
+                    <Button {...propsDisabled}>Button Primary</Button>
+                </div>
+                <div className="bz--col-2">
+                    <Button {...propsSecondaryDisabled}>Button Secondary</Button>
+                </div>
+                <div className="bz--col-2">
+                    <Button {...propsTertiaryDisabled}>Button Tertiary</Button>
+                </div>
+            </div>
+        );
+    })
