@@ -18,8 +18,8 @@ export class NonIdealState extends React.Component<Props> {
         const { header, children, action, description } = this.props;
         return (
             <div className={`${namespace}--non-ideal-state`}>
-                {header && <h1>{header}</h1>}
-                {description && ensureElement(description, "span")}
+                {header && <h1 className={`${namespace}--non-ideal-state__heading`}>{header}</h1>}
+                <div className={`${namespace}--non-ideal-state__message`}>{description && ensureElement(description, "span")}</div>
                 {children}
                 {action}
             </div>
