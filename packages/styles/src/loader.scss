@@ -1,0 +1,42 @@
+.bz--loader {
+    &--circular {
+        width: $loader-size;
+        height: $loader-size;
+        min-width: $loader-size;
+        min-height: $loader-size;
+        border: $loader-border-size solid $loader-border-bg-color;
+        border-radius: 50%;
+        border-top: $loader-border-size solid $loader-border-color;
+        -webkit-animation: spin 0.5s linear infinite;
+        animation: spin 0.5s linear infinite;
+    }
+
+    &--text {
+        font-size: $loader-text-size;
+        margin-top: 15px;
+        color: $loader-text-color;
+    }
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
