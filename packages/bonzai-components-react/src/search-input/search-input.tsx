@@ -2,6 +2,9 @@ import * as React from "react";
 import classNames from "classnames";
 import { settings } from "../settings";
 import { debounce } from "../utils";
+import { Button } from "../button/button";
+import "./search-input.scss";
+import {bem} from "../bem"
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
     id: string,
@@ -10,6 +13,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     className?: string,
     leadingIcon?: string,
     trailingIcon?: string,
+    showButton?:boolean,
+    buttonContent?: JSX.Element,
     clearIcon?: string,
     onTypeEnd?: Function,
     clearSearchTooltip?: string,
@@ -17,7 +22,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     disabled?: boolean,
     autoSuggest?: boolean,
     suggestions?: string[],
-    onSearch?: Function
+    onSearch?: Function,
+    onButtonClick?: Function
 };
 
 interface DefaultProps {
@@ -101,7 +107,9 @@ export class SearchInput extends React.Component<Props, State> {
             placeHolder,
             onClear,
             autoSuggest,
-            suggestions
+            suggestions,
+            showButton,
+            buttonContent
         } = this.props;
         const { value } = this.state;
         const inputClasses = classNames({
@@ -121,6 +129,12 @@ export class SearchInput extends React.Component<Props, State> {
             [`${namespace}--input-trailingicon`]: true,
             [`${trailingIcon}`]: trailingIcon,
         });
+        const buttonClass = classNames({
+            [`${namespace}--input-trailingicon ${namespace}--trailingbutton`]: true,
+            [`${bem.e(`${namespace}--search-wrapper`), "button"}`]: true
+        });
+
+        const buttonContentjsx = buttonContent ? buttonContent : <i className="icon-search"></i> 
 
         return (
           <div className={wrapperClasses}>
@@ -137,7 +151,18 @@ export class SearchInput extends React.Component<Props, State> {
                     onBlur={this.onBlur}
                     onKeyUp={this.onKeyUp}
                 ></input>
-                { trailingIcon ? <label htmlFor={id} className={trailingIconClasses}></label> : null }
+                { showButton ? <Button 
+                    onClick={e => {
+                        if (typeof this.props.onButtonClick === "function") {
+                            this.props.onButtonClick(e , this.state.value);
+                        }
+                        
+                        if (typeof this.props.onSearch === "function") {
+                                this.props.onSearch(e, this.state.value);
+                        }
+                        
+                    }}
+                kind="tertiary" className={buttonClass}>{buttonContentjsx}</Button> : trailingIcon ? <label htmlFor={id} className={trailingIconClasses}></label> : null }
             </div>
             {typeof onClear === "function"
                 && this.state.value != ""
