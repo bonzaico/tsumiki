@@ -37,6 +37,18 @@ storiesOf("Search input", module)
             <SearchInput {...props} />
         );
     })
+    .add("With trailing icon", () => {
+        const props = {
+            id: "brand-search",
+            value: "",
+            placeHolder: "Search for brands",
+            trailingButton: true,
+            onTrailingButtonClick:action("Button click")
+        };
+        return (
+            <SearchInput {...props} />
+        );
+    })
     .add("With search icon in the beginning", () => {
         const props = {
             id: "brand-search",

@@ -2,6 +2,8 @@ import * as React from "react";
 import classNames from "classnames";
 import { settings } from "../settings";
 import { debounce } from "../utils";
+import { Button } from "../button/button";
+import "./search-input.scss";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
     id: string,
@@ -10,6 +12,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     className?: string,
     leadingIcon?: string,
     trailingIcon?: string,
+    trailingButton?:boolean,
+    trailingButtonContent?: JSX.Element,
     clearIcon?: string,
     onTypeEnd?: Function,
     clearSearchTooltip?: string,
@@ -17,7 +21,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     disabled?: boolean,
     autoSuggest?: boolean,
     suggestions?: string[],
-    onSearch?: Function
+    onSearch?: Function,
+    onTrailingButtonClick?: Function
 };
 
 interface DefaultProps {
@@ -101,7 +106,10 @@ export class SearchInput extends React.Component<Props, State> {
             placeHolder,
             onClear,
             autoSuggest,
-            suggestions
+            suggestions,
+            trailingButton,
+            onTrailingButtonClick,
+            trailingButtonContent
         } = this.props;
         const { value } = this.state;
         const inputClasses = classNames({
@@ -137,7 +145,13 @@ export class SearchInput extends React.Component<Props, State> {
                     onBlur={this.onBlur}
                     onKeyUp={this.onKeyUp}
                 ></input>
-                { trailingIcon ? <label htmlFor={id} className={trailingIconClasses}></label> : null }
+                { trailingButton ? <Button 
+                    onClick={e => {
+                        if (typeof this.props.onTrailingButtonClick === "function") {
+                            this.props.onTrailingButtonClick(this.state.value);
+                        }
+                    }}
+                kind="tertiary" className={trailingIconClasses}>{trailingButtonContent}</Button> : trailingIcon ? <label htmlFor={id} className={trailingIconClasses}></label> : null }
             </div>
             {typeof onClear === "function"
                 && this.state.value != ""
