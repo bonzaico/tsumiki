@@ -1,11 +1,15 @@
 import * as React from "react";
 import classNames from "classnames";
 import { settings } from "../settings";
+import { Button } from "../button/button";
+import "./tag.scss";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
     kind?: "grey" | "green" | "blue" | "yellow" | "red",
     content: string,
-    className?: string
+    className?: string,
+    close?: boolean,
+    closeFunc?: Function
 };
 
 const namespace = settings.namespace;
@@ -14,6 +18,8 @@ export const Tag: React.FunctionComponent<Props> = ({
     kind = "grey",
     content,
     className,
+    close,
+    closeFunc,
     ...other
 }: Props) => {
     const tagClasses = classNames({
@@ -29,9 +35,15 @@ export const Tag: React.FunctionComponent<Props> = ({
         className: tagClasses,
         ...other
     };
+    const closebtn = <Button kind="tertiary" onClick= {e =>{
+        if(typeof closeFunc ==="function"){
+            closeFunc(content);
+        }
+    }}>x</Button>
     return React.createElement(
         "div",
         tagProps,
-        content
+        content,
+        close?closebtn:""
     );
 };

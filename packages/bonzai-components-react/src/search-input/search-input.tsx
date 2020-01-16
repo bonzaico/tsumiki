@@ -28,6 +28,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     suggestions?: string[],
     onSearch?: Function,
     onButtonClick?: Function
+    onTrailingButtonClick?: Function,
+    onFocusEvent?: Function
 };
 
 interface DefaultProps {
@@ -72,9 +74,6 @@ export class SearchInput extends React.Component<Props, State> {
 
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         window.clearTimeout(this.typingTimer);
-        if (typeof this.props.onKeyDown === "function") {
-            this.props.onKeyDown(e);
-        }
         if (e.key === "Enter" && typeof this.props.onSearch === "function") {
             let searchTerm = (e.target as HTMLInputElement).value;
             this.props.onSearch(searchTerm);
@@ -85,6 +84,13 @@ export class SearchInput extends React.Component<Props, State> {
         window.clearTimeout(this.typingTimer);
         if (typeof this.props.onBlur === "function") {
             this.props.onBlur(e);
+        }
+    }
+
+    onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+        window.clearTimeout(this.typingTimer);
+        if (typeof this.props.onFocusEvent === "function") {
+            this.props.onFocusEvent(e);
         }
     }
 
@@ -154,6 +160,7 @@ export class SearchInput extends React.Component<Props, State> {
                     onChange={this.onChange}
                     onBlur={this.onBlur}
                     onKeyUp={this.onKeyUp}
+                    onFocus = {this.onFocus}
                 ></input>
                 { showButton ? <Button 
                     onClick={e => {
