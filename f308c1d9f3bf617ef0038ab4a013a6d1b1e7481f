@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82ff79ed_794f431f",
+        "filename": "packages/bonzai-components-react/src/search-input/search-input.scss",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2020-01-16T16:30:21Z",
+      "side": 1,
+      "message": "No! Please no.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 65
+      },
+      "revId": "f308c1d9f3bf617ef0038ab4a013a6d1b1e7481f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "252ab3f2_e29c409b",
+        "filename": "packages/bonzai-components-react/src/search-input/search-input.scss",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2020-01-16T16:30:21Z",
+      "side": 1,
+      "message": "Always try to work with classes. Let\u0027s discuss this.",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 7
+      },
+      "revId": "f308c1d9f3bf617ef0038ab4a013a6d1b1e7481f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "04e4d3c8_f46fe5e2",
+        "filename": "packages/bonzai-components-react/src/search-input/search-input.tsx",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2020-01-16T16:30:21Z",
+      "side": 1,
+      "message": "We don\u0027t need this.\n\nAlso, the button can only occur in trailing position, then why name it trailing button, simply button would do.",
+      "range": {
+        "startLine": 15,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 18
+      },
+      "revId": "f308c1d9f3bf617ef0038ab4a013a6d1b1e7481f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71243843_00e3cae1",
+        "filename": "packages/bonzai-components-react/src/search-input/search-input.tsx",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1009480
+      },
+      "writtenOn": "2020-01-16T16:30:21Z",
+      "side": 1,
+      "message": "If a callback is not provided will the button do something? If that callback is provided will clicking it still trigger a search?",
+      "revId": "f308c1d9f3bf617ef0038ab4a013a6d1b1e7481f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
