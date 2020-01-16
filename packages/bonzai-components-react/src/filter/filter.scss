@@ -1,0 +1,67 @@
+.bz--filter{
+    border: 1px solid #f1ebeb;
+    position: relative;
+    height: 30px;
+    display: flex;
+    &:hover{
+        border: 1px solid lightgrey;
+    }
+
+    &__options{
+        background: white;
+        max-height: 200px;
+        overflow-y:scroll;
+        position: absolute;
+        width:100%;
+        border-bottom: 1px solid #f3f3f3;
+        z-index: 10;
+        top:30px;
+        margin:0;
+        padding: 0;
+    }
+
+    &__filter-option{
+        padding-left: 20px;
+        height: 30px;
+        border-bottom: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #f3f3f3;
+    
+        
+        &:hover{
+            background-color: lightgrey;
+        }
+    }
+    &__filter-text{
+            line-height: 30px;
+            font-size: 15px;
+        }
+    
+    
+
+    &__tag{
+        z-index: 10;
+        width:auto;
+        height: 100%;
+    
+        .bz--tag{
+            margin:0 5px;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+
+    .bz--input-wrapper{
+        height: 100%;
+        flex:1
+    }
+    
+    .bz--input{
+        border:none;
+        &:hover{
+            border:none;
+        }
+    }
+}
