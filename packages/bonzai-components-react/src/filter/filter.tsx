@@ -4,6 +4,7 @@ import "./filter.scss";
 import { SearchInput } from "../search-input/search-input";
 import { Tag } from "../tag/tag";
 import { bem } from "../bem";
+import onClickOutside from 'react-onclickoutside';
 
 const MODULE_BEM_BASE = "bz--filter";
 const bemE = bem.e(MODULE_BEM_BASE);
@@ -22,7 +23,7 @@ interface State {
     searchTerm: string;
 }
 
-export class Filter extends React.Component<Props> {
+class FilterComponent extends React.Component<Props> {
     state: State = {
         showFilters: false,
         selectedFilters: [],
@@ -38,6 +39,14 @@ export class Filter extends React.Component<Props> {
         this.setState({
             dropdownList: list
         });
+    }
+
+    handleClickOutside = () => {
+        this.onBlur();
+    };
+
+    onBlur = () =>{
+        this.setState({showFilters:false});
     }
 
     toggleFilters(flag: boolean) {
@@ -145,8 +154,8 @@ export class Filter extends React.Component<Props> {
         const showFilter = this.state.showFilters;
         const props = {
             id: "filterSearch",
-            trailingIcon: "fa fa-caret-down",
-            placeHolder: "",
+            trailingIcon: "icon-dropdown",
+            placeHolder: "Filter",
             onFocusEvent: (e: string) => {
                 this.toggleFilters(true);
             },
@@ -159,7 +168,7 @@ export class Filter extends React.Component<Props> {
 
         return init && dropdownList && selectedFilters ? (
             <div className={`${MODULE_BEM_BASE}`}>
-                <div>
+                <div className={bemE("tag-container")}>
                     <div className={bemE("tag")}>
                         {this.renderTags(init, dropdownList, selectedFilters)}
                     </div>
@@ -175,3 +184,5 @@ export class Filter extends React.Component<Props> {
         ) : null;
     }
 }
+
+export const Filter = onClickOutside(FilterComponent);
