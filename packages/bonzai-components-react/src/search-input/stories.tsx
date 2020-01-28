@@ -10,9 +10,7 @@ storiesOf("Search input", module)
             value: "",
             placeHolder: "Search for brands"
         };
-        return (
-            <SearchInput {...props} />
-        );
+        return <SearchInput {...props} />;
     })
     .add("Type end", () => {
         const props = {
@@ -21,9 +19,7 @@ storiesOf("Search input", module)
             placeHolder: "Search for brands",
             onTypeEnd: action("onTypeEnd")
         };
-        return (
-            <SearchInput {...props} />
-        );
+        return <SearchInput {...props} />;
     })
     .add("With clear icon", () => {
         const props = {
@@ -33,9 +29,7 @@ storiesOf("Search input", module)
             onTypeEnd: action("onTypeEnd"),
             onClear: action("onClear")
         };
-        return (
-            <SearchInput {...props} />
-        );
+        return <SearchInput {...props} />;
     })
     .add("With trailing icon", () => {
         const props = {
@@ -43,11 +37,9 @@ storiesOf("Search input", module)
             value: "",
             placeHolder: "Search for brands",
             showButton: true,
-            onSearch:action("dsd")
+            onSearch: action("dsd")
         };
-        return (
-            <SearchInput {...props} />
-        );
+        return <SearchInput {...props} />;
     })
     .add("With search icon in the beginning", () => {
         const props = {
@@ -57,15 +49,13 @@ storiesOf("Search input", module)
             onTypeEnd: action("onTypeEnd"),
             leadingIcon: "icon-search"
         };
-        return (
-            <SearchInput {...props} />
-        );
+        return <SearchInput {...props} />;
     })
     .add("With autosuggest", () => {
         const suggestions = ["random", "text"];
         interface State {
-            searchTerm: string
-        };
+            searchTerm: string;
+        }
         class AutoSuggest extends React.Component<{}, State> {
             state: State = {
                 searchTerm: ""
@@ -75,29 +65,35 @@ storiesOf("Search input", module)
                 let props = {
                     id: "brand-search",
                     value: "",
-                    placeHolder: "Search for brands",
+                    placeHolder: "What do you want to build today?",
                     onTypeEnd: (searchTerm: string) => {
                         this.setState({
                             searchTerm: searchTerm
-                        })
+                        });
                     },
                     autoSuggest: true,
                     suggestions: [],
-                    onSearch: action("onSearch")
+                    onSearch: action("onSearch"),
+                    minimal: true,
+                    large: true
                 };
                 const propsWithSuggestions = {
                     ...props,
                     suggestions
                 };
-                return <div>
-                    <div className="bz--col-4">
-                        <SearchInput {...(this.state.searchTerm ? propsWithSuggestions : props)} />
+                return (
+                    <div>
+                        <div className="bz--col-4">
+                            <SearchInput
+                                {...(this.state.searchTerm
+                                    ? propsWithSuggestions
+                                    : props)}
+                            />
+                        </div>
                     </div>
-                </div>
+                );
             }
-        };
+        }
 
-        return (
-            <AutoSuggest />
-        );
+        return <AutoSuggest />;
     });
