@@ -5,6 +5,7 @@ import { debounce } from "../utils";
 import { Button } from "../button/button";
 import "./search-input.scss";
 import { bem } from "../bem";
+import onClickOutside from 'react-onclickoutside';
 
 const MODULE_BEM_BASE = "bz--search-wrapper";
 const bemE = bem.e(MODULE_BEM_BASE);
@@ -29,6 +30,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     onSearch?: Function;
     onButtonClick?: Function;
     onFocusEvent?: Function;
+    large?:Boolean;
+    minimal?:Boolean;
 }
 
 interface DefaultProps {
@@ -42,11 +45,13 @@ interface DefaultProps {
 
 interface State {
     value: string;
+    outsideClick:boolean;
+    keydown:number;
 }
 
 const namespace = settings.namespace;
 
-export class SearchInput extends React.Component<Props, State> {
+class SearchInputComponent extends React.Component<Props, State> {
     static defaultProps: DefaultProps = {
         defaultValue: "",
         placeHolder: "Enter search text",
@@ -56,7 +61,9 @@ export class SearchInput extends React.Component<Props, State> {
         autoSuggest: false
     };
     state: State = {
-        value: this.props.defaultValue || SearchInput.defaultProps.defaultValue
+        value: this.props.defaultValue || SearchInputComponent.defaultProps.defaultValue,
+        outsideClick : false,
+        keydown:0,
     };
     typingTimer: number | undefined = undefined;
 
@@ -76,9 +83,29 @@ export class SearchInput extends React.Component<Props, State> {
         if (typeof this.props.onKeyDown === "function") {
             this.props.onKeyDown(e);
         }
+
+        const suggestions = this.props.suggestions?this.props.suggestions:[];
+        const key = this.state.keydown;
+        
+        if(e.keyCode ===40){
+            this.setState({
+                keydown:suggestions.length === key ? 0 : this.state.keydown+1
+            })
+        }
+
+        if(e.keyCode ===38){
+            this.setState({
+                keydown:key===0 ? suggestions.length : this.state.keydown-1
+            })
+        }
+
         if (e.key === "Enter" && typeof this.props.onSearch === "function") {
+            if(suggestions.length>0 && this.state.keydown!==0){
+                this.props.onSearch(e, suggestions?suggestions[this.state.keydown-1]:null);
+            }else{
             let searchTerm = (e.target as HTMLInputElement).value;
             this.props.onSearch(e, searchTerm);
+            }
         }
     };
 
@@ -87,6 +114,11 @@ export class SearchInput extends React.Component<Props, State> {
         if (typeof this.props.onBlur === "function") {
             this.props.onBlur(e);
         }
+    };
+
+
+    handleClickOutside = () => {
+        this.setState({outsideClick:true})
     };
 
     onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -102,7 +134,8 @@ export class SearchInput extends React.Component<Props, State> {
         e.persist();
         window.clearTimeout(this.typingTimer);
         this.setState({
-            value: searchValue
+            value: searchValue,
+            outsideClick:false
         });
         if (typeof this.props.onChange === "function") {
             this.props.onChange(e);
@@ -121,7 +154,9 @@ export class SearchInput extends React.Component<Props, State> {
             autoSuggest,
             suggestions,
             showButton,
-            buttonContent
+            buttonContent,
+            minimal,
+            large
         } = this.props;
         const { value } = this.state;
         const inputClasses = classNames({
@@ -131,7 +166,9 @@ export class SearchInput extends React.Component<Props, State> {
             [`${namespace}--input__trailingicon`]: trailingIcon
         });
         const wrapperClasses = classNames({
-            [`${namespace}--input-wrapper ${namespace}--search-wrapper`]: true
+            [`${namespace}--input-wrapper ${namespace}--search-wrapper`]: true,
+            [minimal ? `${bemM("minimal")}`:''] :true,
+            [large ? `${bemM("large")}`:''] :true
         });
         const leadingIconClasses = classNames({
             [`${namespace}--input-leadingicon`]: true,
@@ -145,12 +182,18 @@ export class SearchInput extends React.Component<Props, State> {
             [`${namespace}--input-trailingicon ${namespace}--trailingbutton`]: true,
             [`${bemE("button")}`]: true
         });
+        const selected = classNames({
+            [`${namespace}--selected`]: true,
+        });
 
         const buttonContentjsx = buttonContent ? (
             buttonContent
         ) : (
             <i className="icon-search"></i>
         );
+
+
+        const suggestion = this.state.outsideClick ? 0 : suggestions;
 
         return (
             <div className={wrapperClasses}>
@@ -213,10 +256,10 @@ export class SearchInput extends React.Component<Props, State> {
                         }}
                     ></span>
                 ) : null}
-                {autoSuggest && suggestions && suggestions.length ? (
+                {autoSuggest && suggestion && suggestion.length ? (
                     <ul className="dropdown">
-                        {suggestions.map(s => (
-                            <li className="dropdown--item" key={s}>
+                        {suggestion.map((s,index) => (
+                            <li className={`dropdown--item ${index+1 === this.state.keydown ?selected:''}`} key={s}>
                                 {s}
                             </li>
                         ))}
@@ -226,3 +269,5 @@ export class SearchInput extends React.Component<Props, State> {
         );
     }
 }
+
+export const SearchInput= onClickOutside(SearchInputComponent);

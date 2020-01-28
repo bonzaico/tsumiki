@@ -75,7 +75,7 @@ storiesOf("Search input", module)
                 let props = {
                     id: "brand-search",
                     value: "",
-                    placeHolder: "Search for brands",
+                    placeHolder: "What do you want to build today?",
                     onTypeEnd: (searchTerm: string) => {
                         this.setState({
                             searchTerm: searchTerm
@@ -83,7 +83,9 @@ storiesOf("Search input", module)
                     },
                     autoSuggest: true,
                     suggestions: [],
-                    onSearch: action("onSearch")
+                    onSearch: action("onSearch"),
+                     minimal:true,
+                     large:true
                 };
                 const propsWithSuggestions = {
                     ...props,
