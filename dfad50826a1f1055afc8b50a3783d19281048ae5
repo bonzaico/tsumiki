@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "025b5bde_4d5e539c",
+        "filename": "packages/bonzai-components-react/src/filter/filter.tsx",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1013747
+      },
+      "writtenOn": "2020-01-30T10:11:04Z",
+      "side": 1,
+      "message": "const key",
+      "revId": "dfad50826a1f1055afc8b50a3783d19281048ae5",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1101cac8_b20c6540",
+        "filename": "packages/bonzai-components-react/src/filter/filter.tsx",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1013747
+      },
+      "writtenOn": "2020-01-30T10:11:04Z",
+      "side": 1,
+      "message": "use key",
+      "range": {
+        "startLine": 98,
+        "startChar": 55,
+        "endLine": 98,
+        "endChar": 73
+      },
+      "revId": "dfad50826a1f1055afc8b50a3783d19281048ae5",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4006f1ad_0941f7ed",
+        "filename": "packages/bonzai-components-react/src/filter/filter.tsx",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1013747
+      },
+      "writtenOn": "2020-01-30T10:11:04Z",
+      "side": 1,
+      "message": "remove console",
+      "revId": "dfad50826a1f1055afc8b50a3783d19281048ae5",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
