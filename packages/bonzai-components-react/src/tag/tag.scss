@@ -1,6 +1,15 @@
 .bz--tag{
     .bz--btn{
-        padding:0px 10px;
+        padding:0px 5px;
         font-size:auto;
+        &:hover{
+            background: transparent;
+        }
+    }
+    .tag-remove:before {
+        content: "\00d7";
+        font-weight: bold;
+        font-size: 14px;
     }
 }
+

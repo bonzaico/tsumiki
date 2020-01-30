@@ -44,7 +44,7 @@ export const Tag: React.FunctionComponent<Props> = ({
                 }
             }}
         >
-            x
+            <div className="tag-remove"></div>
         </Button>
     );
     return React.createElement(
