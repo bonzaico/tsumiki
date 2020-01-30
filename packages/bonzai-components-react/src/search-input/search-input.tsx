@@ -75,7 +75,7 @@ class SearchInputComponent extends React.Component<Props, State> {
         this.typingTimer = debounce(() => {
             if (typeof this.props.onTypeEnd === "function") {
                 const target = e.target as HTMLInputElement;
-                this.props.onTypeEnd(target.value.trim());
+                this.props.onTypeEnd(target.value.trim(), e);
             }
         }, 500)();
     };
@@ -109,6 +109,7 @@ class SearchInputComponent extends React.Component<Props, State> {
                     e,
                     suggestions ? suggestions[this.state.keydown - 1] : null
                 );
+                this.handleClickOutside();
             } else {
                 let searchTerm = (e.target as HTMLInputElement).value;
                 this.props.onSearch(e, searchTerm);
@@ -271,6 +272,15 @@ class SearchInputComponent extends React.Component<Props, State> {
                                         : ""
                                 }`}
                                 key={s}
+                                onClick={e => {
+                                    if (
+                                        typeof this.props.onSearch ===
+                                        "function"
+                                    ) {
+                                        this.props.onSearch(e, s);
+                                        this.handleClickOutside();
+                                    }
+                                }}
                             >
                                 {s}
                             </li>

@@ -14,6 +14,8 @@
         position: absolute;
         width: 100%;
         border-bottom: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #f3f3f3;
         z-index: 10;
         top: 30px;
         margin: 0;
@@ -23,9 +25,6 @@
     &__filter-option {
         padding-left: 20px;
         height: 30px;
-        border-bottom: 1px solid #f3f3f3;
-        border-left: 1px solid #f3f3f3;
-        border-right: 1px solid #f3f3f3;
 
         &:hover {
             background-color: lightgrey;
@@ -64,5 +63,15 @@
 
     &__tag-container{
         overflow: hidden;
+    }
+
+    .bz--selected {
+        background: #dcdcdc;
+    }
+
+    &__tag{
+        .bz--tag{
+            font-size: 12px;
+        }
     }
 }
