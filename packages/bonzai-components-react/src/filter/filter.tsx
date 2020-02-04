@@ -117,6 +117,7 @@ class FilterComponent extends React.Component<Props> {
                 this.setState({
                     selectedFilters: filters
                 });
+                this.search(this.state.searchTerm, filters);
                 if (typeof this.props.onChangeEvent === "function") {
                     this.props.onChangeEvent(filters);
                 }
@@ -158,11 +159,7 @@ class FilterComponent extends React.Component<Props> {
         });
     }
 
-    search(
-        search: string,
-        dropdownList: Array<string>,
-        selectedFilters: Array<string>
-    ) {
+    search(search: string, selectedFilters: Array<string>) {
         const init = this.props.filters || {};
 
         const result = Object.keys(init)
@@ -210,18 +207,14 @@ class FilterComponent extends React.Component<Props> {
         const props = {
             id: "filterSearch",
             trailingIcon: "icon-dropdown",
-            placeHolder: selectedFilters.length < 1 ? "Filters" : "",
+            value: this.state.searchTerm,
+            placeHolder: selectedFilters.length < 1 ? "FILTERS" : "",
             onFocusEvent: (e: string) => {
                 this.toggleFilters(true);
             },
-            onTypeEnd: (
-                v: string,
-                e: React.KeyboardEvent<HTMLInputElement>
-            ) => {
+            onChangeEvent: (v: string) => {
                 dropdownList && selectedFilters
-                    ? e.keyCode === 40 || e.keyCode === 38 || e.key === "Enter"
-                        ? null
-                        : this.search(v, dropdownList, selectedFilters)
+                    ? this.search(v, selectedFilters)
                     : null;
             },
             onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => {

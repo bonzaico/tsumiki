@@ -46,6 +46,10 @@
             position: relative;
             top: 50%;
             transform: translate(0, -50%);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 5px;
+            line-height: 19px;
         }
     }
 
@@ -69,9 +73,8 @@
         background: #dcdcdc;
     }
 
-    &__tag{
-        .bz--tag{
-            font-size: 12px;
-        }
+    .bz--btn{
+        padding-right: 2px;
     }
+
 }
