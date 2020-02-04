@@ -32,6 +32,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     onFocusEvent?: Function;
     large?: Boolean;
     minimal?: Boolean;
+    onChangeEvent?: Function;
+    value?: string;
 }
 
 interface DefaultProps {
@@ -144,10 +146,18 @@ class SearchInputComponent extends React.Component<Props, State> {
             value: searchValue,
             outsideClick: false
         });
-        if (typeof this.props.onChange === "function") {
-            this.props.onChange(e);
+        if (typeof this.props.onChangeEvent === "function") {
+            this.props.onChangeEvent(searchValue);
         }
     };
+
+    componentWillReceiveProps(nextProps: any) {
+        if (nextProps.value !== this.props.value) {
+            this.setState({
+                value: nextProps.value
+            });
+        }
+    }
 
     render() {
         const {
