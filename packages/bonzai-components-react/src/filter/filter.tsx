@@ -89,13 +89,16 @@ class FilterComponent extends React.Component<Props> {
 
         if (e.keyCode === 40) {
             this.setState({
-                keydown: dropdown.length === key ? 0 : key + 1
+                keydown: dropdown.length <= key ? 1 : key + 1
             });
         }
 
         if (e.keyCode === 38) {
             this.setState({
-                keydown: key === 0 ? dropdown.length : key - 1
+                keydown:
+                    key > dropdown.length || key === 0
+                        ? dropdown.length
+                        : key - 1
             });
         }
 
@@ -108,6 +111,10 @@ class FilterComponent extends React.Component<Props> {
                     key
                 );
             }
+        }
+
+        if (e.keyCode === 27) {
+            this.handleClickOutside();
         }
 
         if (e.key === "Backspace") {
