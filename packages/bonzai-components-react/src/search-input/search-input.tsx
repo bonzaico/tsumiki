@@ -95,14 +95,18 @@ class SearchInputComponent extends React.Component<Props, State> {
 
         if (e.keyCode === 40) {
             this.setState({
-                keydown: suggestions.length === key ? 0 : this.state.keydown + 1
+                keydown: suggestions.length <= key ? 1 : this.state.keydown + 1
             });
         }
 
         if (e.keyCode === 38) {
             this.setState({
-                keydown: key === 0 ? suggestions.length : this.state.keydown - 1
+                keydown:    key > suggestions.length || key === 0 ? suggestions.length : this.state.keydown - 1
             });
+        }
+
+        if (e.keyCode === 27) {
+            this.handleClickOutside();
         }
 
         if (e.key === "Enter" && typeof this.props.onSearch === "function") {
@@ -176,6 +180,8 @@ class SearchInputComponent extends React.Component<Props, State> {
             large
         } = this.props;
         const { value } = this.state;
+        const suggestion = this.state.outsideClick ? 0 : suggestions;
+        const a = autoSuggest && suggestion && suggestion.length ? "active":'';
         const inputClasses = classNames({
             [`${namespace}--input`]: true,
             [`${this.props.className}`]: className,
@@ -209,11 +215,9 @@ class SearchInputComponent extends React.Component<Props, State> {
             <i className="icon-search"></i>
         );
 
-        const suggestion = this.state.outsideClick ? 0 : suggestions;
-
         return (
             <div className={wrapperClasses}>
-                <div className={`${namespace}--input-container`}>
+                <div className={`${namespace}--input-container ${a}`}>
                     {leadingIcon ? (
                         <label
                             htmlFor={id}
