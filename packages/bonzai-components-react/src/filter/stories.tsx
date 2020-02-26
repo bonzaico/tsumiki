@@ -21,12 +21,13 @@ storiesOf("Filter", module)
             },
             onChangeEvent: (e:Array<string>) =>{
                 console.log(e)
-            }
+            },
+            placeHolder: "Filter by device"
         };
 
         return (
             <div style={{width:'50%'}}>
-                <Filter 
+                <Filter
                 {...props}
                 />
                 <div>asdsad</div>

@@ -12,6 +12,7 @@ const bemM = bem.m(MODULE_BEM_BASE);
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
     filters?: { [key: string]: any };
     onChangeEvent?: Function;
+    placeHolder?: string;
 }
 
 interface State {
@@ -215,7 +216,7 @@ class FilterComponent extends React.Component<Props> {
             id: "filterSearch",
             trailingIcon: "icon-dropdown",
             value: this.state.searchTerm,
-            placeHolder: selectedFilters.length < 1 ? "FILTERS" : "",
+            placeHolder: selectedFilters.length < 1 ? this.props.placeHolder : "",
             onFocusEvent: (e: string) => {
                 this.toggleFilters(true);
             },
