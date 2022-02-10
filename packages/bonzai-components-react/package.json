@@ -48,7 +48,7 @@
     "eslint": "4.8.0",
     "eslint-config-bonzai": "^1.0.5",
     "lint-staged": "4.2.3",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "prettier-eslint-cli": "4.7.1",
     "react": "^16.8.6",
     "react-docgen-typescript-loader": "^3.3.0",
